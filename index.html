@@ -18,6 +18,11 @@ body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--tex
 .q-type{font-size:13px;color:var(--muted);margin-bottom:10px;font-weight:600}.question{font-size:clamp(19px,2.5vw,25px);line-height:1.48;color:#182230;font-weight:700;flex:1;letter-spacing:.01em}.given{margin-top:18px;padding:14px 16px;background:rgba(255,255,255,.86);border:1px solid rgba(136,150,171,.24);border-radius:12px;font-size:15px;line-height:1.7;font-family:Consolas,"Courier New",monospace;color:#182230;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}.given span{color:#b9503c;font-weight:800}.flip-cue{margin-top:16px;font-size:13px;color:var(--muted);align-self:flex-start}.sol-body{flex:1;overflow:auto;font-size:16px;line-height:1.62;padding-right:2px}.sol-step{margin-bottom:12px;padding:12px 14px;border-left:4px solid #c9d2df;border-radius:0 12px 12px 0;background:rgba(255,255,255,.72)}.sol-step:last-child{border-left-color:var(--green);background:#ddf3e4}.sol-step .label{font-size:12px;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}.formula{font-family:Consolas,"Courier New",monospace;font-size:15.5px;color:#182230;white-space:normal}.result{font-size:17px;font-weight:850;color:#226b3b}.small-note{font-size:12px;color:#667085;margin-top:4px;font-family:Arial,Helvetica,sans-serif}
 .known-row{display:flex;justify-content:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap}.k-btn,.n-btn,.shuf-btn{font-family:Arial,Helvetica,sans-serif;font-weight:700}.k-btn{font-size:14px;padding:9px 18px;border-radius:10px;border:1px solid;cursor:pointer;transition:.15s;background:#fff}.k-btn.no{border-color:var(--red);color:var(--red)}.k-btn.no:hover{background:#ffe8e1}.k-btn.yes{border-color:var(--green);color:var(--green)}.k-btn.yes:hover{background:#e2f0e7}.k-btn.new{border-color:var(--blue);color:var(--blue)}.k-btn.new:hover{background:#e2effc}
 .nav-row{display:flex;justify-content:center;align-items:center;gap:10px}.n-btn{font-size:14px;padding:9px 18px;border-radius:10px;border:1px solid var(--line);background:#fff;color:#344054;cursor:pointer;transition:.15s}.n-btn:hover{background:#f8fafc}.n-btn:disabled{opacity:.35;cursor:default}.counter{font-size:14px;color:var(--muted);min-width:72px;text-align:center}.shuf-btn{display:flex;align-items:center;gap:5px;font-size:13px;padding:8px 16px;border-radius:10px;border:1px solid var(--line);background:#fff;color:#475467;cursor:pointer;margin:12px auto 0}.note{margin:14px auto 0;max-width:780px;color:#667085;font-size:12.5px;line-height:1.45;text-align:center}
+
+.tool-row{display:flex;flex-wrap:wrap;gap:8px;margin:.4rem 0 1rem;align-items:center}.tool-btn{font-family:Arial,Helvetica,sans-serif;font-weight:750;font-size:13px;padding:8px 14px;border-radius:10px;border:1px solid var(--line);background:#fff;color:#344054;cursor:pointer;box-shadow:0 1px 2px rgba(16,24,40,.04);transition:.15s}.tool-btn:hover{background:#f8fafc;transform:translateY(-1px)}.tool-btn.qr{border-color:#9cc7ee;color:#185a96}.tool-btn.calc{border-color:#b8addf;color:#5040a4}
+.tool-panel{display:none;max-width:780px;margin:0 auto 1rem;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 14px 36px rgba(16,24,40,.12);padding:16px}.tool-panel.open{display:block}.tool-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}.tool-head h3{font-size:18px;color:#172033}.tool-close{border:0;background:#eef2f7;color:#475467;border-radius:8px;padding:6px 10px;cursor:pointer;font-weight:800}.qr-box{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.qr-box img{width:220px;height:220px;border:1px solid #e1e6ef;border-radius:12px;background:#fff;padding:8px}.qr-url{font-size:13px;line-height:1.45;color:#475467;word-break:break-all;flex:1;min-width:220px}.qr-url strong{display:block;color:#182230;margin-bottom:6px}.qr-actions{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}.mini-btn{font-size:12.5px;padding:7px 10px;border-radius:8px;border:1px solid var(--line);background:#fff;cursor:pointer;color:#344054;font-weight:700}
+.calc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.calc-display{grid-column:1/-1;border:1px solid #d0d7e2;border-radius:12px;padding:12px 14px;font-size:22px;font-family:Consolas,"Courier New",monospace;text-align:right;color:#182230;background:#f8fafc;min-height:52px;overflow:auto}.calc-btn{border:1px solid #d7dde8;background:#fff;border-radius:10px;padding:12px 8px;font-size:16px;font-weight:800;cursor:pointer;color:#344054}.calc-btn:hover{background:#f2f5fa}.calc-btn.op{background:#eef4ff;color:#185a96}.calc-btn.fn{background:#f4f0ff;color:#5040a4}.calc-btn.eq{background:#3f7d54;color:#fff;border-color:#3f7d54}.calc-btn.clear{background:#fff0eb;color:#b9503c;border-color:#f0b8aa}.calc-help{font-size:12.5px;color:#667085;margin-top:10px;line-height:1.45}.calc-error{color:#b9503c;font-weight:700}.wide2{grid-column:span 2}
+
 @media(max-width:620px){.app{padding:16px 10px 24px}.card-wrap,.card-inner,.face{min-height:500px}.face{border-radius:18px}.sol-body{font-size:15px}.formula{font-size:14px}.nav-row{gap:6px}.n-btn{padding:8px 12px}.known-row{gap:7px}.k-btn{padding:8px 12px}}
 </style>
 </head>
@@ -25,6 +30,35 @@ body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--tex
 <div class="app">
 <h2 class="sr-only">Mathe Lernkarten – Pyramiden: Oberfläche und Volumen, Sekundarstufe I Berlin</h2>
 <div class="top"><div class="title-block"><h1>△ Pyramiden – Oberfläche &amp; Volumen</h1><p>Berlin · Mathematik Sekundarstufe I · variable Zahlen bei jedem neuen Versuch</p></div><span class="badge">📚 Lernkarten</span></div>
+
+<div class="tool-row">
+  <button class="tool-btn qr" onclick="event.stopPropagation();toggleQr()">▣ QR-Code zur aktuellen Website</button>
+  <button class="tool-btn calc" onclick="event.stopPropagation();toggleCalc()">🧮 Taschenrechner öffnen/schließen</button>
+</div>
+<div class="tool-panel" id="qrPanel" aria-live="polite">
+  <div class="tool-head"><h3>QR-Code zur aktuellen Website</h3><button class="tool-close" onclick="toggleQr(false)">Schließen</button></div>
+  <div class="qr-box">
+    <img id="qrImg" alt="QR-Code zur aktuellen Website">
+    <div class="qr-url"><strong>Adresse:</strong><span id="qrUrl"></span><div class="qr-actions"><button class="mini-btn" onclick="copyCurrentUrl()">Link kopieren</button><button class="mini-btn" onclick="printQr()">QR-Code drucken</button></div></div>
+  </div>
+</div>
+<div class="tool-panel" id="calcPanel">
+  <div class="tool-head"><h3>Taschenrechner</h3><button class="tool-close" onclick="toggleCalc(false)">Schließen</button></div>
+  <div class="calc-grid" onclick="event.stopPropagation()">
+    <div class="calc-display" id="calcDisplay">0</div>
+    <button class="calc-btn clear" onclick="calcClear()">C</button>
+    <button class="calc-btn fn" onclick="calcBack()">⌫</button>
+    <button class="calc-btn fn" onclick="calcAdd('sqrt(')">√</button>
+    <button class="calc-btn fn" onclick="calcAdd('^2')">x²</button>
+    <button class="calc-btn op" onclick="calcAdd('/')">÷</button>
+    <button class="calc-btn" onclick="calcAdd('7')">7</button><button class="calc-btn" onclick="calcAdd('8')">8</button><button class="calc-btn" onclick="calcAdd('9')">9</button><button class="calc-btn fn" onclick="calcAdd('(')">(</button><button class="calc-btn op" onclick="calcAdd('*')">×</button>
+    <button class="calc-btn" onclick="calcAdd('4')">4</button><button class="calc-btn" onclick="calcAdd('5')">5</button><button class="calc-btn" onclick="calcAdd('6')">6</button><button class="calc-btn fn" onclick="calcAdd(')')">)</button><button class="calc-btn op" onclick="calcAdd('-')">−</button>
+    <button class="calc-btn" onclick="calcAdd('1')">1</button><button class="calc-btn" onclick="calcAdd('2')">2</button><button class="calc-btn" onclick="calcAdd('3')">3</button><button class="calc-btn fn" onclick="calcAdd('pi')">π</button><button class="calc-btn op" onclick="calcAdd('+')">+</button>
+    <button class="calc-btn wide2" onclick="calcAdd('0')">0</button><button class="calc-btn" onclick="calcAdd('.')">,</button><button class="calc-btn op" onclick="calcAdd('/3')">:3</button><button class="calc-btn eq" onclick="calcEval()">=</button>
+  </div>
+  <div class="calc-help">Funktionen passend zu den Aufgaben: Grundrechenarten, Klammern, √, x², π und „:3“ für Volumenformeln. Dezimalkomma wird automatisch unterstützt.</div>
+</div>
+
 <div class="filters" id="filters"></div>
 <div class="stats-row"><span class="stat"><span class="dot" style="background:#3f7d54"></span><span id="sc">0</span> gewusst</span><span class="stat"><span class="dot" style="background:#b9503c"></span><span id="uc">0</span> nochmal</span><span class="stat"><span class="dot" style="background:#c9d2df"></span><span id="oc">0</span> offen</span><div class="prog-wrap"><div class="prog-bar" id="prog" style="width:0%"></div></div><span class="prog-pct" id="pct">0 %</span></div>
 <div class="card-stage"><div class="card-wrap" onclick="flip()" role="button" tabindex="0" aria-label="Karte umdrehen"><div class="card-inner" id="ci"><div class="face face-front"><div class="face-label">Aufgabe</div><div class="meta-row"><div class="cat-pill" id="cpill">—</div><div class="level-pill" id="lpill">—</div><div class="variant-pill" id="vpill">Variante 1</div></div><div class="q-type" id="qtype"></div><div class="question" id="qtext"></div><div class="given" id="given"></div><div class="flip-cue">↻ Karte umdrehen</div></div><div class="face face-back"><div class="face-label">Lösungsweg</div><div class="sol-body" id="sol"></div></div></div></div></div>
@@ -70,6 +104,54 @@ function mark(k){if(!deck.length)return; status[deck[idx].t.id]=k?'k':'u'; updat
 function shuffle(){for(let i=deck.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[deck[i],deck[j]]=[deck[j],deck[i]];} deck.forEach(e=>e.inst=makeInstance(e.t)); idx=0;flipped=false;document.getElementById('ci').classList.remove('flipped');document.getElementById('kr').style.visibility='hidden';render();}
 function render(){if(!deck.length){document.getElementById('qtext').textContent='Keine Karten in dieser Auswahl.';document.getElementById('given').innerHTML='';document.getElementById('given').style.display='none';document.getElementById('qtype').textContent='';document.getElementById('cpill').textContent='—';document.getElementById('lpill').textContent='—';document.getElementById('vpill').textContent='—';document.getElementById('sol').innerHTML='';document.getElementById('cnt').textContent='0 / 0';document.getElementById('pb').disabled=true;document.getElementById('nb').disabled=true;updateStats();return;} const c=deck[idx].inst;document.getElementById('cpill').textContent=c.cat+' · '+c.base;let ci=CATS.indexOf(c.cat);document.getElementById('cpill').className='cat-pill '+(ci>0?'v'+ci:'');document.getElementById('lpill').textContent='Niveau '+c.niveau;document.getElementById('vpill').textContent='Variante '+c.variant;document.getElementById('qtype').textContent=c.type;document.getElementById('qtext').textContent=c.q;const giv=document.getElementById('given'),gk=Object.keys(c.given||{});if(gk.length){giv.style.display='block';giv.innerHTML=gk.map(k=>`<span>${k}</span> = ${c.given[k]}`).join(' &ensp;|&ensp; ');}else{giv.style.display='none';}document.getElementById('sol').innerHTML=c.steps.map(s=>`<div class="sol-step"><div class="label">${s.l}</div><div class="formula ${s.res?'result':''}">${s.f}</div>${s.note?`<div class="small-note">${s.note}</div>`:''}</div>`).join('');document.getElementById('cnt').textContent=(idx+1)+' / '+deck.length;document.getElementById('pb').disabled=idx===0;document.getElementById('nb').disabled=idx===deck.length-1;updateStats();}
 function updateStats(){let k=0,u=0;deck.forEach(e=>{const s=status[e.t.id];if(s==='k')k++;else if(s==='u')u++;});const op=deck.length-k-u;document.getElementById('sc').textContent=k;document.getElementById('uc').textContent=u;document.getElementById('oc').textContent=op;const pct=deck.length?Math.round((k/deck.length)*100):0;document.getElementById('prog').style.width=pct+'%';document.getElementById('pct').textContent=pct+' %';}
+
+function toggleQr(force){
+  const p=document.getElementById('qrPanel');
+  const open = force===undefined ? !p.classList.contains('open') : !!force;
+  p.classList.toggle('open',open);
+  if(open){
+    const url=window.location.href;
+    document.getElementById('qrUrl').textContent=url;
+    document.getElementById('qrImg').src='https://api.qrserver.com/v1/create-qr-code/?size=260x260&margin=10&data='+encodeURIComponent(url);
+  }
+}
+function toggleCalc(force){
+  const p=document.getElementById('calcPanel');
+  const open = force===undefined ? !p.classList.contains('open') : !!force;
+  p.classList.toggle('open',open);
+}
+function copyCurrentUrl(){
+  const url=window.location.href;
+  if(navigator.clipboard){navigator.clipboard.writeText(url);}
+}
+function printQr(){
+  const url=window.location.href;
+  const img=document.getElementById('qrImg').src;
+  const w=window.open('','_blank');
+  if(!w)return;
+  w.document.write('<!DOCTYPE html><html><head><meta charset="UTF-8"><title>QR-Code</title><style>body{font-family:Arial;text-align:center;padding:30px}img{width:260px;height:260px}p{word-break:break-all;color:#475467}</style></head><body><h2>QR-Code zur Lernkarten-App</h2><img src="'+img+'"><p>'+url.replace(/</g,'&lt;')+'</p><script>window.onload=function(){window.print()}<\/script></body></html>');
+  w.document.close();
+}
+let calcExpr='';
+function calcRender(txt){document.getElementById('calcDisplay').innerHTML=txt||'0';}
+function calcAdd(v){
+  calcExpr += v;
+  calcRender(calcExpr.replaceAll('*','×').replaceAll('/','÷').replaceAll('sqrt','√').replaceAll('pi','π'));
+}
+function calcClear(){calcExpr='';calcRender('0');}
+function calcBack(){calcExpr=calcExpr.slice(0,-1);calcRender(calcExpr.replaceAll('*','×').replaceAll('/','÷').replaceAll('sqrt','√').replaceAll('pi','π'));}
+function calcEval(){
+  try{
+    let expr=calcExpr.replace(/,/g,'.').replace(/π/g,'pi').replace(/√/g,'sqrt');
+    if(!/^[0-9+\-*/().^\s,pisqrt]+$/i.test(expr)) throw new Error('Ungültige Eingabe');
+    expr=expr.replace(/pi/gi,'Math.PI').replace(/sqrt\s*\(/gi,'Math.sqrt(').replace(/(\d+(?:\.\d+)?|\))\s*\^\s*2/g,'Math.pow($1,2)').replace(/(\d+(?:\.\d+)?|\))\s*\^\s*3/g,'Math.pow($1,3)').replace(/\^/g,'**');
+    const result=Function('"use strict";return ('+expr+')')();
+    if(!isFinite(result)) throw new Error('Nicht definiert');
+    calcExpr=String(Math.round(result*1000000)/1000000);
+    calcRender(calcExpr.replace('.',','));
+  }catch(e){calcRender('<span class="calc-error">Fehler</span>');}
+}
+
 function buildFilters(){const f=document.getElementById('filters');CATS.forEach((cat,i)=>{const b=document.createElement('button');b.className='f-btn on '+(i>0?'cat-'+i:'');b.textContent=cat;b.onclick=()=>{if(active.cat.has(cat)&&active.cat.size>1)active.cat.delete(cat);else active.cat.add(cat);b.classList.toggle('on',active.cat.has(cat));buildDeck();};f.appendChild(b);});const sep=document.createElement('span');sep.className='separator';f.appendChild(sep);BASES.forEach(base=>{const b=document.createElement('button');b.className='f-btn on';b.textContent=base;b.onclick=()=>{if(active.base.has(base)&&active.base.size>1)active.base.delete(base);else active.base.add(base);b.classList.toggle('on',active.base.has(base));buildDeck();};f.appendChild(b);});}
 document.querySelector('.card-wrap').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flip();}});
 buildFilters();buildDeck();
