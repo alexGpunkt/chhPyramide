@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
@@ -18,51 +18,120 @@ body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--tex
 .q-type{font-size:13px;color:var(--muted);margin-bottom:10px;font-weight:600}.question{font-size:clamp(19px,2.5vw,25px);line-height:1.48;color:#182230;font-weight:700;flex:1;letter-spacing:.01em}.given{margin-top:18px;padding:14px 16px;background:rgba(255,255,255,.86);border:1px solid rgba(136,150,171,.24);border-radius:12px;font-size:15px;line-height:1.7;font-family:Consolas,"Courier New",monospace;color:#182230;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}.given span{color:#b9503c;font-weight:800}.flip-cue{margin-top:16px;font-size:13px;color:var(--muted);align-self:flex-start}.sol-body{flex:1;overflow:auto;font-size:16px;line-height:1.62;padding-right:2px}.sol-step{margin-bottom:12px;padding:12px 14px;border-left:4px solid #c9d2df;border-radius:0 12px 12px 0;background:rgba(255,255,255,.72)}.sol-step:last-child{border-left-color:var(--green);background:#ddf3e4}.sol-step .label{font-size:12px;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}.formula{font-family:Consolas,"Courier New",monospace;font-size:15.5px;color:#182230;white-space:normal}.result{font-size:17px;font-weight:850;color:#226b3b}.small-note{font-size:12px;color:#667085;margin-top:4px;font-family:Arial,Helvetica,sans-serif}
 .known-row{display:flex;justify-content:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap}.k-btn,.n-btn,.shuf-btn{font-family:Arial,Helvetica,sans-serif;font-weight:700}.k-btn{font-size:14px;padding:9px 18px;border-radius:10px;border:1px solid;cursor:pointer;transition:.15s;background:#fff}.k-btn.no{border-color:var(--red);color:var(--red)}.k-btn.no:hover{background:#ffe8e1}.k-btn.yes{border-color:var(--green);color:var(--green)}.k-btn.yes:hover{background:#e2f0e7}.k-btn.new{border-color:var(--blue);color:var(--blue)}.k-btn.new:hover{background:#e2effc}
 .nav-row{display:flex;justify-content:center;align-items:center;gap:10px}.n-btn{font-size:14px;padding:9px 18px;border-radius:10px;border:1px solid var(--line);background:#fff;color:#344054;cursor:pointer;transition:.15s}.n-btn:hover{background:#f8fafc}.n-btn:disabled{opacity:.35;cursor:default}.counter{font-size:14px;color:var(--muted);min-width:72px;text-align:center}.shuf-btn{display:flex;align-items:center;gap:5px;font-size:13px;padding:8px 16px;border-radius:10px;border:1px solid var(--line);background:#fff;color:#475467;cursor:pointer;margin:12px auto 0}.note{margin:14px auto 0;max-width:780px;color:#667085;font-size:12.5px;line-height:1.45;text-align:center}
-
-.tool-row{display:flex;flex-wrap:wrap;gap:8px;margin:.4rem 0 1rem;align-items:center}.tool-btn{font-family:Arial,Helvetica,sans-serif;font-weight:750;font-size:13px;padding:8px 14px;border-radius:10px;border:1px solid var(--line);background:#fff;color:#344054;cursor:pointer;box-shadow:0 1px 2px rgba(16,24,40,.04);transition:.15s}.tool-btn:hover{background:#f8fafc;transform:translateY(-1px)}.tool-btn.qr{border-color:#9cc7ee;color:#185a96}.tool-btn.calc{border-color:#b8addf;color:#5040a4}
-.tool-panel{display:none;max-width:780px;margin:0 auto 1rem;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 14px 36px rgba(16,24,40,.12);padding:16px}.tool-panel.open{display:block}.tool-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}.tool-head h3{font-size:18px;color:#172033}.tool-close{border:0;background:#eef2f7;color:#475467;border-radius:8px;padding:6px 10px;cursor:pointer;font-weight:800}.qr-box{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.qr-box img{width:220px;height:220px;border:1px solid #e1e6ef;border-radius:12px;background:#fff;padding:8px}.qr-url{font-size:13px;line-height:1.45;color:#475467;word-break:break-all;flex:1;min-width:220px}.qr-url strong{display:block;color:#182230;margin-bottom:6px}.qr-actions{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}.mini-btn{font-size:12.5px;padding:7px 10px;border-radius:8px;border:1px solid var(--line);background:#fff;cursor:pointer;color:#344054;font-weight:700}
-.calc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.calc-display{grid-column:1/-1;border:1px solid #d0d7e2;border-radius:12px;padding:12px 14px;font-size:22px;font-family:Consolas,"Courier New",monospace;text-align:right;color:#182230;background:#f8fafc;min-height:52px;overflow:auto}.calc-btn{border:1px solid #d7dde8;background:#fff;border-radius:10px;padding:12px 8px;font-size:16px;font-weight:800;cursor:pointer;color:#344054}.calc-btn:hover{background:#f2f5fa}.calc-btn.op{background:#eef4ff;color:#185a96}.calc-btn.fn{background:#f4f0ff;color:#5040a4}.calc-btn.eq{background:#3f7d54;color:#fff;border-color:#3f7d54}.calc-btn.clear{background:#fff0eb;color:#b9503c;border-color:#f0b8aa}.calc-help{font-size:12.5px;color:#667085;margin-top:10px;line-height:1.45}.calc-error{color:#b9503c;font-weight:700}.wide2{grid-column:span 2}
-
 @media(max-width:620px){.app{padding:16px 10px 24px}.card-wrap,.card-inner,.face{min-height:500px}.face{border-radius:18px}.sol-body{font-size:15px}.formula{font-size:14px}.nav-row{gap:6px}.n-btn{padding:8px 12px}.known-row{gap:7px}.k-btn{padding:8px 12px}}
+/* ── KlassenMonitor: Namenseingabe-Dialog ─────────────────────── */
+#km-overlay{position:fixed;inset:0;background:rgba(15,20,35,.72);backdrop-filter:blur(6px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;}
+#km-dialog{background:#fff;border-radius:20px;padding:36px 32px 28px;max-width:400px;width:100%;box-shadow:0 24px 60px rgba(0,0,0,.22);text-align:center;animation:km-pop .25s cubic-bezier(.34,1.56,.64,1);}
+@keyframes km-pop{from{transform:scale(.88);opacity:0}to{transform:scale(1);opacity:1}}
+#km-dialog .km-icon{font-size:2.4rem;margin-bottom:12px;}
+#km-dialog h2{font-size:1.25rem;font-weight:800;color:#172033;margin-bottom:6px;letter-spacing:-.02em;}
+#km-dialog p{font-size:.875rem;color:#667085;margin-bottom:22px;line-height:1.5;}
+#km-name-input{width:100%;padding:12px 16px;border:2px solid #d7dde8;border-radius:10px;font-size:1rem;font-family:Arial,Helvetica,sans-serif;color:#172033;outline:none;transition:border-color .15s;text-align:center;}
+#km-name-input:focus{border-color:#2468a8;}
+#km-name-input.error{border-color:#b9503c;animation:km-shake .3s;}
+@keyframes km-shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+#km-start-btn{margin-top:14px;width:100%;padding:13px;background:#2468a8;color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:700;font-family:Arial,Helvetica,sans-serif;cursor:pointer;transition:background .15s;}
+#km-start-btn:hover{background:#1a5090;}
+#km-greeting{position:fixed;bottom:16px;right:16px;background:#172033;color:#fff;padding:9px 16px;border-radius:999px;font-size:.8rem;font-family:Arial,Helvetica,sans-serif;z-index:100;box-shadow:0 4px 14px rgba(0,0,0,.2);display:none;}
+#km-greeting span{color:#65a878;font-weight:700;}
+
+/* ── Zusatztools: QR-Code + Taschenrechner ───────────────────── */
+.tool-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 16px}.tool-btn{border:1px solid var(--line, var(--border, #d7dfec));background:#fff;color:#334155;border-radius:12px;padding:10px 15px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,23,42,.06)}.tool-btn:hover{background:#f1f5f9}.tool-overlay{position:fixed;inset:0;background:rgba(15,23,42,.62);backdrop-filter:blur(5px);z-index:9998;display:none;align-items:center;justify-content:center;padding:18px}.tool-modal{width:min(94vw,420px);background:#fff;border-radius:22px;border:1px solid rgba(148,163,184,.45);box-shadow:0 28px 70px rgba(15,23,42,.28);padding:20px}.tool-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}.tool-head h2{font-size:20px;line-height:1.2;margin:0;color:#172033}.tool-close{border:none;background:#eef2f7;color:#334155;border-radius:999px;width:34px;height:34px;font-size:22px;line-height:1;cursor:pointer}.tool-close:hover{background:#e2e8f0}.qr-box{text-align:center}.qr-box img{width:220px;height:220px;max-width:100%;border:1px solid #d7dfec;border-radius:14px;padding:10px;background:#fff}.qr-url{margin-top:10px;font-size:12px;line-height:1.35;color:#667085;word-break:break-all}.calc-display{width:100%;border:2px solid #d7dfec;border-radius:14px;padding:12px 14px;font-size:22px;text-align:right;font-family:Consolas,"Courier New",monospace;margin-bottom:12px;outline:none}.calc-display:focus{border-color:#2563eb}.calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.calc-key{border:1px solid #d7dfec;background:#f8fafc;color:#172033;border-radius:12px;padding:13px 8px;font-size:18px;font-weight:800;cursor:pointer}.calc-key:hover{background:#eef2f7}.calc-key.op{background:#eef2ff;color:#1d4ed8}.calc-key.clear{background:#fff1f2;color:#be123c}.calc-key.equal{background:#2563eb;color:#fff;border-color:#2563eb}.calc-hint{margin-top:11px;color:#667085;font-size:12px;line-height:1.4;text-align:center}@media(max-width:620px){.tool-btn{width:100%;max-width:320px}.tool-modal{padding:16px}.calc-key{padding:12px 6px}}
+/* ── Ergebnis-Eingabe + automatische Kontrolle ───────────────── */
+.answer-row{max-width:780px;margin:0 auto 16px;padding:14px 16px;border:1px solid var(--line, var(--border, #d7dfec));border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(15,23,42,.07)}
+.answer-label{display:block;font-size:13px;font-weight:800;color:#334155;margin-bottom:8px;text-align:center}
+.answer-controls{display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap}
+.answer-input{flex:1;min-width:210px;max-width:380px;border:2px solid var(--line, var(--border, #d7dfec));border-radius:12px;padding:10px 12px;font-size:18px;font-family:Consolas,"Courier New",monospace;text-align:center;outline:none;background:#fff;color:#172033}
+.answer-input:focus{border-color:var(--blue, #2563eb)}
+.answer-btn{border:1px solid var(--line, var(--border, #d7dfec));background:#fff;color:#334155;border-radius:12px;padding:10px 14px;font-size:14px;font-weight:800;cursor:pointer}
+.answer-btn:hover{background:#f1f5f9}.answer-btn.check{background:var(--blue, #2563eb);border-color:var(--blue, #2563eb);color:#fff}.answer-btn.hint{color:var(--muted, #667085)}
+.answer-feedback{min-height:22px;margin-top:9px;font-size:13px;line-height:1.45;text-align:center;color:var(--muted, #667085)}
+.answer-feedback.ok{color:var(--green, #16845f);font-weight:800}.answer-feedback.bad{color:var(--red, #c2410c);font-weight:800}.answer-feedback.hint{color:var(--blue, #2563eb)}
+@media(max-width:620px){.answer-row{margin-left:auto;margin-right:auto}.answer-input,.answer-btn{width:100%;max-width:320px}}
 </style>
 </head>
 <body>
+
+<!-- KlassenMonitor: Namenseingabe -->
+<div id="km-overlay">
+  <div id="km-dialog">
+    <div class="km-icon">△</div>
+    <h2>Pyramiden – Lernkarten</h2>
+    <p>Gib deinen Namen oder dein Kürzel ein,<br>damit deine Lehrerin / dein Lehrer sieht,<br>dass du aktiv arbeitest.</p>
+    <input id="km-name-input" type="text" placeholder="z. B. Max M." maxlength="40" autocomplete="off" />
+    <button id="km-start-btn" onclick="kmStart()">Loslegen →</button>
+  </div>
+</div>
+<!-- Greeting Badge (unten rechts) -->
+<div id="km-greeting">👋 Hallo, <span id="km-name-display"></span></div>
 <div class="app">
 <h2 class="sr-only">Mathe Lernkarten – Pyramiden: Oberfläche und Volumen, Sekundarstufe I Berlin</h2>
 <div class="top"><div class="title-block"><h1>△ Pyramiden – Oberfläche &amp; Volumen</h1><p>Berlin · Mathematik Sekundarstufe I · variable Zahlen bei jedem neuen Versuch</p></div><span class="badge">📚 Lernkarten</span></div>
-
-<div class="tool-row">
-  <button class="tool-btn qr" onclick="event.stopPropagation();toggleQr()">▣ QR-Code zur aktuellen Website</button>
-  <button class="tool-btn calc" onclick="event.stopPropagation();toggleCalc()">🧮 Taschenrechner öffnen/schließen</button>
-</div>
-<div class="tool-panel" id="qrPanel" aria-live="polite">
-  <div class="tool-head"><h3>QR-Code zur aktuellen Website</h3><button class="tool-close" onclick="toggleQr(false)">Schließen</button></div>
-  <div class="qr-box">
-    <img id="qrImg" alt="QR-Code zur aktuellen Website">
-    <div class="qr-url"><strong>Adresse:</strong><span id="qrUrl"></span><div class="qr-actions"><button class="mini-btn" onclick="copyCurrentUrl()">Link kopieren</button><button class="mini-btn" onclick="printQr()">QR-Code drucken</button></div></div>
-  </div>
-</div>
-<div class="tool-panel" id="calcPanel">
-  <div class="tool-head"><h3>Taschenrechner</h3><button class="tool-close" onclick="toggleCalc(false)">Schließen</button></div>
-  <div class="calc-grid" onclick="event.stopPropagation()">
-    <div class="calc-display" id="calcDisplay">0</div>
-    <button class="calc-btn clear" onclick="calcClear()">C</button>
-    <button class="calc-btn fn" onclick="calcBack()">⌫</button>
-    <button class="calc-btn fn" onclick="calcAdd('sqrt(')">√</button>
-    <button class="calc-btn fn" onclick="calcAdd('^2')">x²</button>
-    <button class="calc-btn op" onclick="calcAdd('/')">÷</button>
-    <button class="calc-btn" onclick="calcAdd('7')">7</button><button class="calc-btn" onclick="calcAdd('8')">8</button><button class="calc-btn" onclick="calcAdd('9')">9</button><button class="calc-btn fn" onclick="calcAdd('(')">(</button><button class="calc-btn op" onclick="calcAdd('*')">×</button>
-    <button class="calc-btn" onclick="calcAdd('4')">4</button><button class="calc-btn" onclick="calcAdd('5')">5</button><button class="calc-btn" onclick="calcAdd('6')">6</button><button class="calc-btn fn" onclick="calcAdd(')')">)</button><button class="calc-btn op" onclick="calcAdd('-')">−</button>
-    <button class="calc-btn" onclick="calcAdd('1')">1</button><button class="calc-btn" onclick="calcAdd('2')">2</button><button class="calc-btn" onclick="calcAdd('3')">3</button><button class="calc-btn fn" onclick="calcAdd('pi')">π</button><button class="calc-btn op" onclick="calcAdd('+')">+</button>
-    <button class="calc-btn wide2" onclick="calcAdd('0')">0</button><button class="calc-btn" onclick="calcAdd('.')">,</button><button class="calc-btn op" onclick="calcAdd('/3')">:3</button><button class="calc-btn eq" onclick="calcEval()">=</button>
-  </div>
-  <div class="calc-help">Funktionen passend zu den Aufgaben: Grundrechenarten, Klammern, √, x², π und „:3“ für Volumenformeln. Dezimalkomma wird automatisch unterstützt.</div>
-</div>
-
 <div class="filters" id="filters"></div>
 <div class="stats-row"><span class="stat"><span class="dot" style="background:#3f7d54"></span><span id="sc">0</span> gewusst</span><span class="stat"><span class="dot" style="background:#b9503c"></span><span id="uc">0</span> nochmal</span><span class="stat"><span class="dot" style="background:#c9d2df"></span><span id="oc">0</span> offen</span><div class="prog-wrap"><div class="prog-bar" id="prog" style="width:0%"></div></div><span class="prog-pct" id="pct">0 %</span></div>
+<div class="tool-row">
+  <button class="tool-btn" onclick="showQrTool(event)">📱 QR-Code zur Seite</button>
+  <button class="tool-btn" onclick="showCalcTool(event)">🧮 Taschenrechner</button>
+</div>
+
+<div class="tool-overlay" id="qrToolOverlay" onclick="closeToolOverlay(event, 'qrToolOverlay')">
+  <div class="tool-modal" onclick="event.stopPropagation()">
+    <div class="tool-head">
+      <h2>QR-Code zur aktuellen Seite</h2>
+      <button class="tool-close" onclick="hideTool('qrToolOverlay')" aria-label="QR-Code schließen">×</button>
+    </div>
+    <div class="qr-box">
+      <img id="qrToolImage" alt="QR-Code zur aktuellen Website">
+      <div class="qr-url" id="qrToolUrl"></div>
+    </div>
+  </div>
+</div>
+
+<div class="tool-overlay" id="calcToolOverlay" onclick="closeToolOverlay(event, 'calcToolOverlay')">
+  <div class="tool-modal" onclick="event.stopPropagation()">
+    <div class="tool-head">
+      <h2>Taschenrechner</h2>
+      <button class="tool-close" onclick="hideTool('calcToolOverlay')" aria-label="Taschenrechner schließen">×</button>
+    </div>
+    <input class="calc-display" id="calcDisplay" value="" inputmode="decimal" aria-label="Recheneingabe" placeholder="0">
+    <div class="calc-grid">
+      <button class="calc-key clear" onclick="calcClear(event)">C</button>
+      <button class="calc-key" onclick="calcBack(event)">⌫</button>
+      <button class="calc-key op" onclick="calcAdd(event,'(')">(</button>
+      <button class="calc-key op" onclick="calcAdd(event,')')">)</button>
+      <button class="calc-key" onclick="calcAdd(event,'7')">7</button>
+      <button class="calc-key" onclick="calcAdd(event,'8')">8</button>
+      <button class="calc-key" onclick="calcAdd(event,'9')">9</button>
+      <button class="calc-key op" onclick="calcAdd(event,'÷')">÷</button>
+      <button class="calc-key" onclick="calcAdd(event,'4')">4</button>
+      <button class="calc-key" onclick="calcAdd(event,'5')">5</button>
+      <button class="calc-key" onclick="calcAdd(event,'6')">6</button>
+      <button class="calc-key op" onclick="calcAdd(event,'×')">×</button>
+      <button class="calc-key" onclick="calcAdd(event,'1')">1</button>
+      <button class="calc-key" onclick="calcAdd(event,'2')">2</button>
+      <button class="calc-key" onclick="calcAdd(event,'3')">3</button>
+      <button class="calc-key op" onclick="calcAdd(event,'-')">−</button>
+      <button class="calc-key" onclick="calcAdd(event,'0')">0</button>
+      <button class="calc-key" onclick="calcAdd(event,',')">,</button>
+      <button class="calc-key equal" onclick="calcEval(event)">=</button>
+      <button class="calc-key op" onclick="calcAdd(event,'+')">+</button>
+    </div>
+    <div class="calc-hint">Tipp: Du kannst auch mit der Tastatur rechnen. Punkt oder Komma funktionieren beide.</div>
+  </div>
+</div>
+
 <div class="card-stage"><div class="card-wrap" onclick="flip()" role="button" tabindex="0" aria-label="Karte umdrehen"><div class="card-inner" id="ci"><div class="face face-front"><div class="face-label">Aufgabe</div><div class="meta-row"><div class="cat-pill" id="cpill">—</div><div class="level-pill" id="lpill">—</div><div class="variant-pill" id="vpill">Variante 1</div></div><div class="q-type" id="qtype"></div><div class="question" id="qtext"></div><div class="given" id="given"></div><div class="flip-cue">↻ Karte umdrehen</div></div><div class="face face-back"><div class="face-label">Lösungsweg</div><div class="sol-body" id="sol"></div></div></div></div></div>
 <div class="known-row" id="kr" style="visibility:hidden"><button class="k-btn no" onclick="event.stopPropagation();mark(false)">✕ Nochmal mit neuen Zahlen</button><button class="k-btn new" onclick="event.stopPropagation();newNumbers()">↻ Neue Zahlen</button><button class="k-btn yes" onclick="event.stopPropagation();mark(true)">✓ Verstanden</button></div>
+
+<div class="answer-row" onclick="event.stopPropagation()">
+<label class="answer-label" for="answerInput">Ergebnis eingeben und kontrollieren lassen</label>
+<div class="answer-controls">
+<input class="answer-input" id="answerInput" type="text" inputmode="decimal" placeholder="z. B. 125 oder 125,5" autocomplete="off">
+<button class="answer-btn check" onclick="checkAnswer(event)">Prüfen</button>
+<button class="answer-btn hint" onclick="showExpectedAnswer(event)">Lösung anzeigen</button>
+</div>
+<div class="answer-feedback" id="answerFeedback">Du kannst auch mehrere Ergebnisse mit Semikolon trennen, z. B. 120; 80.</div>
+</div>
 <div class="nav-row"><button class="n-btn" id="pb" onclick="nav(-1)" disabled>‹ Zurück</button><span class="counter" id="cnt">1 / 1</span><button class="n-btn" id="nb" onclick="nav(1)">Weiter ›</button></div><button class="shuf-btn" onclick="shuffle()">🔀 Mischen + neue Zahlen</button>
 <div class="note">Bei „Nochmal“ und „Neue Zahlen“ wird dieselbe Aufgabenart mit anderen Werten neu erzeugt. Die Anwendung vermeidet dabei, dass direkt zweimal hintereinander dieselbe Zahlenkombination erscheint.</div>
 </div>
@@ -102,59 +171,284 @@ function nav(d){idx=Math.max(0,Math.min(deck.length-1,idx+d));flipped=false;docu
 function newNumbers(){if(!deck.length)return; deck[idx].inst=makeInstance(deck[idx].t); flipped=false;document.getElementById('ci').classList.remove('flipped');document.getElementById('kr').style.visibility='hidden';render();}
 function mark(k){if(!deck.length)return; status[deck[idx].t.id]=k?'k':'u'; updateStats(); if(k){if(idx<deck.length-1)setTimeout(()=>nav(1),220);}else{setTimeout(()=>newNumbers(),220);}}
 function shuffle(){for(let i=deck.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[deck[i],deck[j]]=[deck[j],deck[i]];} deck.forEach(e=>e.inst=makeInstance(e.t)); idx=0;flipped=false;document.getElementById('ci').classList.remove('flipped');document.getElementById('kr').style.visibility='hidden';render();}
-function render(){if(!deck.length){document.getElementById('qtext').textContent='Keine Karten in dieser Auswahl.';document.getElementById('given').innerHTML='';document.getElementById('given').style.display='none';document.getElementById('qtype').textContent='';document.getElementById('cpill').textContent='—';document.getElementById('lpill').textContent='—';document.getElementById('vpill').textContent='—';document.getElementById('sol').innerHTML='';document.getElementById('cnt').textContent='0 / 0';document.getElementById('pb').disabled=true;document.getElementById('nb').disabled=true;updateStats();return;} const c=deck[idx].inst;document.getElementById('cpill').textContent=c.cat+' · '+c.base;let ci=CATS.indexOf(c.cat);document.getElementById('cpill').className='cat-pill '+(ci>0?'v'+ci:'');document.getElementById('lpill').textContent='Niveau '+c.niveau;document.getElementById('vpill').textContent='Variante '+c.variant;document.getElementById('qtype').textContent=c.type;document.getElementById('qtext').textContent=c.q;const giv=document.getElementById('given'),gk=Object.keys(c.given||{});if(gk.length){giv.style.display='block';giv.innerHTML=gk.map(k=>`<span>${k}</span> = ${c.given[k]}`).join(' &ensp;|&ensp; ');}else{giv.style.display='none';}document.getElementById('sol').innerHTML=c.steps.map(s=>`<div class="sol-step"><div class="label">${s.l}</div><div class="formula ${s.res?'result':''}">${s.f}</div>${s.note?`<div class="small-note">${s.note}</div>`:''}</div>`).join('');document.getElementById('cnt').textContent=(idx+1)+' / '+deck.length;document.getElementById('pb').disabled=idx===0;document.getElementById('nb').disabled=idx===deck.length-1;updateStats();}
+function render(){if(!deck.length){document.getElementById('qtext').textContent='Keine Karten in dieser Auswahl.';document.getElementById('given').innerHTML='';document.getElementById('given').style.display='none';document.getElementById('qtype').textContent='';document.getElementById('cpill').textContent='—';document.getElementById('lpill').textContent='—';document.getElementById('vpill').textContent='—';document.getElementById('sol').innerHTML='';document.getElementById('cnt').textContent='0 / 0';document.getElementById('pb').disabled=true;document.getElementById('nb').disabled=true;updateStats();resetAnswerBox();return;} const c=deck[idx].inst;document.getElementById('cpill').textContent=c.cat+' · '+c.base;let ci=CATS.indexOf(c.cat);document.getElementById('cpill').className='cat-pill '+(ci>0?'v'+ci:'');document.getElementById('lpill').textContent='Niveau '+c.niveau;document.getElementById('vpill').textContent='Variante '+c.variant;document.getElementById('qtype').textContent=c.type;document.getElementById('qtext').textContent=c.q;const giv=document.getElementById('given'),gk=Object.keys(c.given||{});if(gk.length){giv.style.display='block';giv.innerHTML=gk.map(k=>`<span>${k}</span> = ${c.given[k]}`).join(' &ensp;|&ensp; ');}else{giv.style.display='none';}document.getElementById('sol').innerHTML=c.steps.map(s=>`<div class="sol-step"><div class="label">${s.l}</div><div class="formula ${s.res?'result':''}">${s.f}</div>${s.note?`<div class="small-note">${s.note}</div>`:''}</div>`).join('');document.getElementById('cnt').textContent=(idx+1)+' / '+deck.length;document.getElementById('pb').disabled=idx===0;document.getElementById('nb').disabled=idx===deck.length-1;resetAnswerBox();updateStats();}
 function updateStats(){let k=0,u=0;deck.forEach(e=>{const s=status[e.t.id];if(s==='k')k++;else if(s==='u')u++;});const op=deck.length-k-u;document.getElementById('sc').textContent=k;document.getElementById('uc').textContent=u;document.getElementById('oc').textContent=op;const pct=deck.length?Math.round((k/deck.length)*100):0;document.getElementById('prog').style.width=pct+'%';document.getElementById('pct').textContent=pct+' %';}
-
-function toggleQr(force){
-  const p=document.getElementById('qrPanel');
-  const open = force===undefined ? !p.classList.contains('open') : !!force;
-  p.classList.toggle('open',open);
-  if(open){
-    const url=window.location.href;
-    document.getElementById('qrUrl').textContent=url;
-    document.getElementById('qrImg').src='https://api.qrserver.com/v1/create-qr-code/?size=260x260&margin=10&data='+encodeURIComponent(url);
-  }
-}
-function toggleCalc(force){
-  const p=document.getElementById('calcPanel');
-  const open = force===undefined ? !p.classList.contains('open') : !!force;
-  p.classList.toggle('open',open);
-}
-function copyCurrentUrl(){
-  const url=window.location.href;
-  if(navigator.clipboard){navigator.clipboard.writeText(url);}
-}
-function printQr(){
-  const url=window.location.href;
-  const img=document.getElementById('qrImg').src;
-  const w=window.open('','_blank');
-  if(!w)return;
-  w.document.write('<!DOCTYPE html><html><head><meta charset="UTF-8"><title>QR-Code</title><style>body{font-family:Arial;text-align:center;padding:30px}img{width:260px;height:260px}p{word-break:break-all;color:#475467}</style></head><body><h2>QR-Code zur Lernkarten-App</h2><img src="'+img+'"><p>'+url.replace(/</g,'&lt;')+'</p><script>window.onload=function(){window.print()}<\/script></body></html>');
-  w.document.close();
-}
-let calcExpr='';
-function calcRender(txt){document.getElementById('calcDisplay').innerHTML=txt||'0';}
-function calcAdd(v){
-  calcExpr += v;
-  calcRender(calcExpr.replaceAll('*','×').replaceAll('/','÷').replaceAll('sqrt','√').replaceAll('pi','π'));
-}
-function calcClear(){calcExpr='';calcRender('0');}
-function calcBack(){calcExpr=calcExpr.slice(0,-1);calcRender(calcExpr.replaceAll('*','×').replaceAll('/','÷').replaceAll('sqrt','√').replaceAll('pi','π'));}
-function calcEval(){
-  try{
-    let expr=calcExpr.replace(/,/g,'.').replace(/π/g,'pi').replace(/√/g,'sqrt');
-    if(!/^[0-9+\-*/().^\s,pisqrt]+$/i.test(expr)) throw new Error('Ungültige Eingabe');
-    expr=expr.replace(/pi/gi,'Math.PI').replace(/sqrt\s*\(/gi,'Math.sqrt(').replace(/(\d+(?:\.\d+)?|\))\s*\^\s*2/g,'Math.pow($1,2)').replace(/(\d+(?:\.\d+)?|\))\s*\^\s*3/g,'Math.pow($1,3)').replace(/\^/g,'**');
-    const result=Function('"use strict";return ('+expr+')')();
-    if(!isFinite(result)) throw new Error('Nicht definiert');
-    calcExpr=String(Math.round(result*1000000)/1000000);
-    calcRender(calcExpr.replace('.',','));
-  }catch(e){calcRender('<span class="calc-error">Fehler</span>');}
-}
-
 function buildFilters(){const f=document.getElementById('filters');CATS.forEach((cat,i)=>{const b=document.createElement('button');b.className='f-btn on '+(i>0?'cat-'+i:'');b.textContent=cat;b.onclick=()=>{if(active.cat.has(cat)&&active.cat.size>1)active.cat.delete(cat);else active.cat.add(cat);b.classList.toggle('on',active.cat.has(cat));buildDeck();};f.appendChild(b);});const sep=document.createElement('span');sep.className='separator';f.appendChild(sep);BASES.forEach(base=>{const b=document.createElement('button');b.className='f-btn on';b.textContent=base;b.onclick=()=>{if(active.base.has(base)&&active.base.size>1)active.base.delete(base);else active.base.add(base);b.classList.toggle('on',active.base.has(base));buildDeck();};f.appendChild(b);});}
 document.querySelector('.card-wrap').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flip();}});
 buildFilters();buildDeck();
-</script>
+
+// ════════════════════════════════════════════════════════════════
+// KlassenMonitor – Tracker & Namenseingabe
+// ════════════════════════════════════════════════════════════════
+(function(){
+  'use strict';
+
+  const SUPABASE_URL = 'https://sntbedutlztfsyzlxqfl.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_nWFLSFS56Pg6QLeCz1IC1Q_3P7KqD80';
+  const APP_NAME     = 'Pyramiden Lernkarten';
+  const PING_MS      = 30000;
+  const STORAGE_CID  = 'km_client_id';
+  const STORAGE_NAME = 'km_student_name';
+
+  // Stabile Client-ID
+  let clientId = localStorage.getItem(STORAGE_CID);
+  if(!clientId){
+    clientId = (crypto.randomUUID ? crypto.randomUUID() : 'id_'+Math.random().toString(36).slice(2)+'_'+Date.now());
+    localStorage.setItem(STORAGE_CID, clientId);
+  }
+
+  function slugify(t){ return String(t).toLowerCase().replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss').replace(/[^a-z0-9]+/g,'_').replace(/^_+|_+$/g,''); }
+  const SESSION_ID = 'sess_'+slugify(APP_NAME)+'_'+clientId;
+
+  let studentName = '';
+  let intervalId  = null;
+  let leaveTimer  = null;
+
+  // ── Dialog ──────────────────────────────────────────────────────
+  window.kmStart = function(){
+    const input = document.getElementById('km-name-input');
+    const name  = input.value.trim();
+    if(name.length < 2){
+      input.classList.add('error');
+      setTimeout(()=>input.classList.remove('error'), 400);
+      input.focus();
+      return;
+    }
+    studentName = name;
+    localStorage.setItem(STORAGE_NAME, name);
+    window.KM_STUDENT_NAME = name;
+
+    // Dialog ausblenden
+    document.getElementById('km-overlay').style.display = 'none';
+
+    // App initialisieren (erst jetzt, nach Namenseingabe)
+    buildFilters();
+    buildDeck();
+
+    // Greeting anzeigen
+    document.getElementById('km-name-display').textContent = name;
+    const g = document.getElementById('km-greeting');
+    g.style.display = 'block';
+    setTimeout(()=>{ g.style.transition='opacity .6s'; g.style.opacity='0'; setTimeout(()=>g.style.display='none',700); }, 3500);
+
+    // Tracker starten
+    sendPing('ping');
+    intervalId = setInterval(()=>{ if(!document.hidden) sendPing('ping'); }, PING_MS);
+  };
+
+  // Enter-Taste im Namensfeld
+  document.getElementById('km-name-input').addEventListener('keydown', e=>{
+    if(e.key==='Enter') window.kmStart();
+  });
+
+  // Gespeicherten Namen vorausfüllen (optional)
+  const saved = localStorage.getItem(STORAGE_NAME);
+  if(saved) document.getElementById('km-name-input').value = saved;
+
+  // ── Ping / Leave ────────────────────────────────────────────────
+  async function sendPing(action){
+    try{
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/active_sessions?on_conflict=session_id`,{
+        method:'POST',
+        headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY,'Content-Type':'application/json','Prefer':'resolution=merge-duplicates,return=minimal'},
+        body:JSON.stringify({session_id:SESSION_ID,client_id:clientId,app_name:APP_NAME,student_name:studentName||null,last_seen:new Date().toISOString(),action})
+      });
+      if(!res.ok){ const t=await res.text().catch(()=>''); console.error('[KM] Ping-Fehler:',res.status,t); }
+      else{ console.debug('[KM] Ping:',action,studentName); }
+    }catch(e){ console.error('[KM] Netzfehler:',e); }
+  }
+
+  async function sendLeave(){
+    try{
+      await fetch(`${SUPABASE_URL}/rest/v1/active_sessions?session_id=eq.${encodeURIComponent(SESSION_ID)}`,{
+        method:'PATCH', keepalive:true,
+        headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},
+        body:JSON.stringify({last_seen:'2000-01-01T00:00:00Z',action:'leave'})
+      });
+    }catch(e){ console.error('[KM] Leave-Fehler:',e); }
+  }
+
+  // ── Events ──────────────────────────────────────────────────────
+  window.addEventListener('beforeunload',()=>{
+    if(leaveTimer) clearTimeout(leaveTimer);
+    if(intervalId) clearInterval(intervalId);
+    sendLeave();
+  });
+
+  document.addEventListener('visibilitychange',()=>{
+    if(!studentName) return; // noch nicht gestartet
+    if(document.hidden){
+      leaveTimer = setTimeout(()=>sendLeave(), 5000);
+    } else {
+      if(leaveTimer){ clearTimeout(leaveTimer); leaveTimer=null; }
+      sendPing('ping');
+    }
+  });
+
+})();
+
+
+// ── Ergebnis-Eingabe + automatische Kontrolle ─────────────────
+function getCurrentCardData(){
+    if(!deck || !deck.length) return null;
+    const entry = deck[idx];
+    return entry ? (entry.data || entry.inst || null) : null;
+}
+function parseNumbersFromText(text){
+    const matches = String(text || '').match(/-?\d+(?:[\.,]\d+)?/g) || [];
+    return matches.map(x => Number(String(x).replace(',', '.'))).filter(Number.isFinite);
+}
+function uniqueNumbers(nums){
+    const out=[];
+    nums.forEach(n=>{ if(!out.some(x=>Math.abs(x-n)<0.000001)) out.push(n); });
+    return out;
+}
+function expectedAnswers(){
+    const c = getCurrentCardData();
+    if(!c || !Array.isArray(c.steps)) return [];
+    const resultSteps = c.steps.filter(s => s.res);
+    const source = (resultSteps.length ? resultSteps : c.steps.slice(-1)).map(s => s.f || '').join(' | ');
+    const unitRegex = /(-?\d+(?:[\.,]\d+)?)\s*(?:cm²|cm³|cm2|cm3|cm|dm³|dm3|m²|m³|m2|m3|ml|Liter|l\b)/gi;
+    const vals=[];
+    let m;
+    while((m = unitRegex.exec(source)) !== null){ vals.push(Number(m[1].replace(',', '.'))); }
+    if(vals.length) return uniqueNumbers(vals);
+    const all = parseNumbersFromText(source);
+    return all.length ? [all[all.length-1]] : [];
+}
+function formatAnswerNumber(n){
+    const rounded = Math.round(n * 100) / 100;
+    return String(rounded).replace('.', ',');
+}
+function answerTolerance(expected){
+    return Math.max(0.05, Math.abs(expected) * 0.01);
+}
+function resetAnswerBox(){
+    const input = document.getElementById('answerInput');
+    const fb = document.getElementById('answerFeedback');
+    if(input) input.value = '';
+    if(fb){
+        fb.className = 'answer-feedback';
+        const n = expectedAnswers().length;
+        fb.textContent = n > 1 ? 'Mehrere Ergebnisse bitte mit Semikolon trennen, z. B. Volumen; Oberfläche.' : 'Gib nur die Zahl ein. Einheiten wie cm² oder cm³ sind nicht nötig.';
+    }
+}
+function checkAnswer(e){
+    if(e){ e.stopPropagation(); e.preventDefault(); }
+    const input = document.getElementById('answerInput');
+    const fb = document.getElementById('answerFeedback');
+    if(!input || !fb) return;
+    const expected = expectedAnswers();
+    const given = parseNumbersFromText(input.value);
+    fb.className = 'answer-feedback';
+    if(!expected.length){
+        fb.classList.add('hint');
+        fb.textContent = 'Für diese Karte konnte kein eindeutiges Zahlen-Ergebnis erkannt werden. Drehe die Karte um und vergleiche den Lösungsweg.';
+        return;
+    }
+    if(!given.length){
+        fb.classList.add('bad');
+        fb.textContent = 'Bitte gib zuerst eine Zahl ein.';
+        input.focus();
+        return;
+    }
+    const matched = expected.map(exp => given.some(g => Math.abs(g-exp) <= answerTolerance(exp)));
+    const correct = matched.every(Boolean);
+    if(correct){
+        fb.classList.add('ok');
+        fb.textContent = '✓ Richtig! Das Ergebnis passt.';
+        if(deck && deck.length){
+            const entry = deck[idx];
+            const id = entry.type ? entry.type.id : (entry.t ? entry.t.id : null);
+            if(id){ status[id] = 'k'; updateStats(); }
+        }
+    }else{
+        fb.classList.add('bad');
+        fb.textContent = expected.length > 1
+            ? 'Noch nicht richtig. Prüfe, ob du alle gesuchten Ergebniswerte eingegeben hast.'
+            : 'Noch nicht richtig. Prüfe Formel, Einsetzen und Einheit noch einmal.';
+        if(deck && deck.length){
+            const entry = deck[idx];
+            const id = entry.type ? entry.type.id : (entry.t ? entry.t.id : null);
+            if(id && status[id] !== 'k'){ status[id] = 'u'; updateStats(); }
+        }
+    }
+}
+function showExpectedAnswer(e){
+    if(e){ e.stopPropagation(); e.preventDefault(); }
+    const fb = document.getElementById('answerFeedback');
+    if(!fb) return;
+    const expected = expectedAnswers();
+    fb.className = 'answer-feedback hint';
+    fb.textContent = expected.length
+        ? 'Erwartete Zahl(en): ' + expected.map(formatAnswerNumber).join(' ; ')
+        : 'Keine eindeutige Zahl erkannt. Nutze den Lösungsweg auf der Rückseite.';
+}
+const answerInputEl = document.getElementById('answerInput');
+if(answerInputEl){
+    answerInputEl.addEventListener('keydown', e => {
+        if(e.key === 'Enter') checkAnswer(e);
+    });
+}
+
+// ── Zusatztools: QR-Code + Taschenrechner ─────────────────────
+function toolStop(e){ if(e){ e.stopPropagation(); e.preventDefault(); } }
+function currentPageUrl(){
+    const url = window.location.href;
+    if(url && !url.startsWith('file:')) return url;
+    return 'https://dein-github-name.github.io/dein-repository/';
+}
+function showQrTool(e){
+    toolStop(e);
+    const url = currentPageUrl();
+    const img = document.getElementById('qrToolImage');
+    const label = document.getElementById('qrToolUrl');
+    if(img) img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=10&data=' + encodeURIComponent(url);
+    if(label) label.textContent = url.startsWith('https://dein-github-name') ? 'Nach dem Hochladen auf GitHub wird hier automatisch die echte Seitenadresse verwendet.' : url;
+    const overlay = document.getElementById('qrToolOverlay');
+    if(overlay) overlay.style.display = 'flex';
+}
+function showCalcTool(e){
+    toolStop(e);
+    const overlay = document.getElementById('calcToolOverlay');
+    if(overlay) overlay.style.display = 'flex';
+    setTimeout(()=>{ const d=document.getElementById('calcDisplay'); if(d) d.focus(); }, 50);
+}
+function hideTool(id){ const overlay=document.getElementById(id); if(overlay) overlay.style.display='none'; }
+function closeToolOverlay(e,id){ if(e && e.target && e.target.id===id) hideTool(id); }
+function calcAdd(e,val){
+    toolStop(e);
+    const d=document.getElementById('calcDisplay');
+    if(!d) return;
+    d.value += val;
+    d.focus();
+}
+function calcClear(e){ toolStop(e); const d=document.getElementById('calcDisplay'); if(d){ d.value=''; d.focus(); } }
+function calcBack(e){ toolStop(e); const d=document.getElementById('calcDisplay'); if(d){ d.value=d.value.slice(0,-1); d.focus(); } }
+function calcEval(e){
+    toolStop(e);
+    const d=document.getElementById('calcDisplay');
+    if(!d) return;
+    try{
+        let expr=d.value.replace(/,/g,'.').replace(/×/g,'*').replace(/÷/g,'/').replace(/−/g,'-');
+        if(!/^[0-9+\-*/().\s]*$/.test(expr)) throw new Error('Ungültige Eingabe');
+        const result = Function('"use strict"; return (' + expr + ')')();
+        if(!Number.isFinite(result)) throw new Error('Nicht berechenbar');
+        d.value = String(Math.round(result*100000000)/100000000).replace('.', ',');
+    }catch(err){
+        d.value='Fehler';
+        setTimeout(()=>{ if(d.value==='Fehler') d.value=''; }, 900);
+    }
+    d.focus();
+}
+document.addEventListener('keydown', function(e){
+    const calcOpen = document.getElementById('calcToolOverlay')?.style.display === 'flex';
+    const qrOpen = document.getElementById('qrToolOverlay')?.style.display === 'flex';
+    if(e.key === 'Escape'){
+        if(calcOpen) hideTool('calcToolOverlay');
+        if(qrOpen) hideTool('qrToolOverlay');
+    }
+    if(calcOpen && e.key === 'Enter') calcEval(e);
+});</script>
 </body>
 </html>
