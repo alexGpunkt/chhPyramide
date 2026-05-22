@@ -19,7 +19,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--tex
 .known-row{display:flex;justify-content:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap}.k-btn,.n-btn,.shuf-btn{font-family:Arial,Helvetica,sans-serif;font-weight:700}.k-btn{font-size:14px;padding:9px 18px;border-radius:10px;border:1px solid;cursor:pointer;transition:.15s;background:#fff}.k-btn.no{border-color:var(--red);color:var(--red)}.k-btn.no:hover{background:#ffe8e1}.k-btn.yes{border-color:var(--green);color:var(--green)}.k-btn.yes:hover{background:#e2f0e7}.k-btn.new{border-color:var(--blue);color:var(--blue)}.k-btn.new:hover{background:#e2effc}
 .nav-row{display:flex;justify-content:center;align-items:center;gap:10px}.n-btn{font-size:14px;padding:9px 18px;border-radius:10px;border:1px solid var(--line);background:#fff;color:#344054;cursor:pointer;transition:.15s}.n-btn:hover{background:#f8fafc}.n-btn:disabled{opacity:.35;cursor:default}.counter{font-size:14px;color:var(--muted);min-width:72px;text-align:center}.shuf-btn{display:flex;align-items:center;gap:5px;font-size:13px;padding:8px 16px;border-radius:10px;border:1px solid var(--line);background:#fff;color:#475467;cursor:pointer;margin:12px auto 0}.note{margin:14px auto 0;max-width:780px;color:#667085;font-size:12.5px;line-height:1.45;text-align:center}
 @media(max-width:620px){.app{padding:16px 10px 24px}.card-wrap,.card-inner,.face{min-height:500px}.face{border-radius:18px}.sol-body{font-size:15px}.formula{font-size:14px}.nav-row{gap:6px}.n-btn{padding:8px 12px}.known-row{gap:7px}.k-btn{padding:8px 12px}}
-/* ── KlassenMonitor: Namenseingabe-Dialog ─────────────────────── */
+
 #km-overlay{position:fixed;inset:0;background:rgba(15,20,35,.72);backdrop-filter:blur(6px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;}
 #km-dialog{background:#fff;border-radius:20px;padding:36px 32px 28px;max-width:400px;width:100%;box-shadow:0 24px 60px rgba(0,0,0,.22);text-align:center;animation:km-pop .25s cubic-bezier(.34,1.56,.64,1);}
 @keyframes km-pop{from{transform:scale(.88);opacity:0}to{transform:scale(1);opacity:1}}
@@ -35,24 +35,23 @@ body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--tex
 #km-greeting{position:fixed;bottom:16px;right:16px;background:#172033;color:#fff;padding:9px 16px;border-radius:999px;font-size:.8rem;font-family:Arial,Helvetica,sans-serif;z-index:100;box-shadow:0 4px 14px rgba(0,0,0,.2);display:none;}
 #km-greeting span{color:#65a878;font-weight:700;}
 
-/* ── Zusatztools: QR-Code + Taschenrechner ───────────────────── */
-.tool-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 16px}.tool-btn{border:1px solid var(--line, var(--border, #d7dfec));background:#fff;color:#334155;border-radius:12px;padding:10px 15px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,23,42,.06)}.tool-btn:hover{background:#f1f5f9}.tool-overlay{position:fixed;inset:0;background:rgba(15,23,42,.62);backdrop-filter:blur(5px);z-index:9998;display:none;align-items:center;justify-content:center;padding:18px}.tool-modal{width:min(94vw,420px);background:#fff;border-radius:22px;border:1px solid rgba(148,163,184,.45);box-shadow:0 28px 70px rgba(15,23,42,.28);padding:20px}.tool-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}.tool-head h2{font-size:20px;line-height:1.2;margin:0;color:#172033}.tool-close{border:none;background:#eef2f7;color:#334155;border-radius:999px;width:34px;height:34px;font-size:22px;line-height:1;cursor:pointer}.tool-close:hover{background:#e2e8f0}.qr-box{text-align:center}.qr-box img{width:220px;height:220px;max-width:100%;border:1px solid #d7dfec;border-radius:14px;padding:10px;background:#fff}.qr-url{margin-top:10px;font-size:12px;line-height:1.35;color:#667085;word-break:break-all}.calc-display{width:100%;border:2px solid #d7dfec;border-radius:14px;padding:12px 14px;font-size:22px;text-align:right;font-family:Consolas,"Courier New",monospace;margin-bottom:12px;outline:none}.calc-display:focus{border-color:#2563eb}.calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.calc-key{border:1px solid #d7dfec;background:#f8fafc;color:#172033;border-radius:12px;padding:13px 8px;font-size:18px;font-weight:800;cursor:pointer}.calc-key:hover{background:#eef2f7}.calc-key.op{background:#eef2ff;color:#1d4ed8}.calc-key.clear{background:#fff1f2;color:#be123c}.calc-key.equal{background:#2563eb;color:#fff;border-color:#2563eb}.calc-hint{margin-top:11px;color:#667085;font-size:12px;line-height:1.4;text-align:center}@media(max-width:620px){.tool-btn{width:100%;max-width:320px}.tool-modal{padding:16px}.calc-key{padding:12px 6px}}
-/* ── Ergebnis-Eingabe + automatische Kontrolle ───────────────── */
-.answer-row{max-width:780px;margin:0 auto 16px;padding:14px 16px;border:1px solid var(--line, var(--border, #d7dfec));border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(15,23,42,.07)}
+.tool-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 16px}.tool-btn{border:1px solid var(--line, #d7dfec);background:#fff;color:#334155;border-radius:12px;padding:10px 15px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,23,42,.06)}.tool-btn:hover{background:#f1f5f9}.tool-overlay{position:fixed;inset:0;background:rgba(15,23,42,.62);backdrop-filter:blur(5px);z-index:9998;display:none;align-items:center;justify-content:center;padding:18px}.tool-modal{width:min(94vw,420px);background:#fff;border-radius:22px;border:1px solid rgba(148,163,184,.45);box-shadow:0 28px 70px rgba(15,23,42,.28);padding:20px}.tool-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}.tool-head h2{font-size:20px;line-height:1.2;margin:0;color:#172033}.tool-close{border:none;background:#eef2f7;color:#334155;border-radius:999px;width:34px;height:34px;font-size:22px;line-height:1;cursor:pointer}.tool-close:hover{background:#e2e8f0}.qr-box{text-align:center}.qr-box img{width:220px;height:220px;max-width:100%;border:1px solid #d7dfec;border-radius:14px;padding:10px;background:#fff}.qr-url{margin-top:10px;font-size:12px;line-height:1.35;color:#667085;word-break:break-all}.calc-display{width:100%;border:2px solid #d7dfec;border-radius:14px;padding:12px 14px;font-size:22px;text-align:right;font-family:Consolas,"Courier New",monospace;margin-bottom:12px;outline:none}.calc-display:focus{border-color:#2563eb}.calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.calc-key{border:1px solid #d7dfec;background:#f8fafc;color:#172033;border-radius:12px;padding:13px 8px;font-size:18px;font-weight:800;cursor:pointer}.calc-key:hover{background:#eef2f7}.calc-key.op{background:#eef2ff;color:#1d4ed8}.calc-key.clear{background:#fff1f2;color:#be123c}.calc-key.equal{background:#2563eb;color:#fff;border-color:#2563eb}.calc-hint{margin-top:11px;color:#667085;font-size:12px;line-height:1.4;text-align:center}@media(max-width:620px){.tool-btn{width:100%;max-width:320px}.tool-modal{padding:16px}.calc-key{padding:12px 6px}}
+
+.answer-row{max-width:780px;margin:0 auto 16px;padding:14px 16px;border:1px solid var(--line, #d7dfec);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(15,23,42,.07)}
 .answer-label{display:block;font-size:13px;font-weight:800;color:#334155;margin-bottom:8px;text-align:center}
 .answer-controls{display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap}
-.answer-input{flex:1;min-width:210px;max-width:380px;border:2px solid var(--line, var(--border, #d7dfec));border-radius:12px;padding:10px 12px;font-size:18px;font-family:Consolas,"Courier New",monospace;text-align:center;outline:none;background:#fff;color:#172033}
+.answer-input{flex:1;min-width:210px;max-width:380px;border:2px solid var(--line, #d7dfec);border-radius:12px;padding:10px 12px;font-size:18px;font-family:Consolas,"Courier New",monospace;text-align:center;outline:none;background:#fff;color:#172033}
 .answer-input:focus{border-color:var(--blue, #2563eb)}
-.answer-btn{border:1px solid var(--line, var(--border, #d7dfec));background:#fff;color:#334155;border-radius:12px;padding:10px 14px;font-size:14px;font-weight:800;cursor:pointer}
+.answer-btn{border:1px solid var(--line, #d7dfec);background:#fff;color:#334155;border-radius:12px;padding:10px 14px;font-size:14px;font-weight:800;cursor:pointer}
 .answer-btn:hover{background:#f1f5f9}.answer-btn.check{background:var(--blue, #2563eb);border-color:var(--blue, #2563eb);color:#fff}.answer-btn.hint{color:var(--muted, #667085)}
 .answer-feedback{min-height:22px;margin-top:9px;font-size:13px;line-height:1.45;text-align:center;color:var(--muted, #667085)}
 .answer-feedback.ok{color:var(--green, #16845f);font-weight:800}.answer-feedback.bad{color:var(--red, #c2410c);font-weight:800}.answer-feedback.hint{color:var(--blue, #2563eb)}
 @media(max-width:620px){.answer-row{margin-left:auto;margin-right:auto}.answer-input,.answer-btn{width:100%;max-width:320px}}
 </style>
 </head>
+
 <body>
 
-<!-- KlassenMonitor: Namenseingabe -->
 <div id="km-overlay">
   <div id="km-dialog">
     <div class="km-icon">△</div>
@@ -62,13 +61,30 @@ body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--tex
     <button id="km-start-btn" onclick="kmStart()">Loslegen →</button>
   </div>
 </div>
-<!-- Greeting Badge (unten rechts) -->
+
 <div id="km-greeting">👋 Hallo, <span id="km-name-display"></span></div>
+
 <div class="app">
 <h2 class="sr-only">Mathe Lernkarten – Pyramiden: Oberfläche und Volumen, Sekundarstufe I Berlin</h2>
-<div class="top"><div class="title-block"><h1>△ Pyramiden – Oberfläche &amp; Volumen</h1><p>Berlin · Mathematik Sekundarstufe I · variable Zahlen bei jedem neuen Versuch</p></div><span class="badge">📚 Lernkarten</span></div>
+
+<div class="top">
+  <div class="title-block">
+    <h1>△ Pyramiden – Oberfläche &amp; Volumen</h1>
+    <p>Berlin · Mathematik Sekundarstufe I · variable Zahlen bei jedem neuen Versuch</p>
+  </div>
+  <span class="badge">📚 Lernkarten</span>
+</div>
+
 <div class="filters" id="filters"></div>
-<div class="stats-row"><span class="stat"><span class="dot" style="background:#3f7d54"></span><span id="sc">0</span> gewusst</span><span class="stat"><span class="dot" style="background:#b9503c"></span><span id="uc">0</span> nochmal</span><span class="stat"><span class="dot" style="background:#c9d2df"></span><span id="oc">0</span> offen</span><div class="prog-wrap"><div class="prog-bar" id="prog" style="width:0%"></div></div><span class="prog-pct" id="pct">0 %</span></div>
+
+<div class="stats-row">
+  <span class="stat"><span class="dot" style="background:#3f7d54"></span><span id="sc">0</span> gewusst</span>
+  <span class="stat"><span class="dot" style="background:#b9503c"></span><span id="uc">0</span> nochmal</span>
+  <span class="stat"><span class="dot" style="background:#c9d2df"></span><span id="oc">0</span> offen</span>
+  <div class="prog-wrap"><div class="prog-bar" id="prog" style="width:0%"></div></div>
+  <span class="prog-pct" id="pct">0 %</span>
+</div>
+
 <div class="tool-row">
   <button class="tool-btn" onclick="showQrTool(event)">📱 QR-Code zur Seite</button>
   <button class="tool-btn" onclick="showCalcTool(event)">🧮 Taschenrechner</button>
@@ -97,31 +113,67 @@ body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--tex
     <div class="calc-grid">
       <button class="calc-key clear" onclick="calcClear(event)">C</button>
       <button class="calc-key" onclick="calcBack(event)">⌫</button>
-      <button class="calc-key op" onclick="calcAdd(event,'(')">(</button>
-      <button class="calc-key op" onclick="calcAdd(event,')')">)</button>
+      <button class="calc-key op" onclick="calcAdd(event,'√(')">√</button>
+      <button class="calc-key op" onclick="calcAdd(event,'∛(')">∛</button>
+
       <button class="calc-key" onclick="calcAdd(event,'7')">7</button>
       <button class="calc-key" onclick="calcAdd(event,'8')">8</button>
       <button class="calc-key" onclick="calcAdd(event,'9')">9</button>
       <button class="calc-key op" onclick="calcAdd(event,'÷')">÷</button>
+
       <button class="calc-key" onclick="calcAdd(event,'4')">4</button>
       <button class="calc-key" onclick="calcAdd(event,'5')">5</button>
       <button class="calc-key" onclick="calcAdd(event,'6')">6</button>
       <button class="calc-key op" onclick="calcAdd(event,'×')">×</button>
+
       <button class="calc-key" onclick="calcAdd(event,'1')">1</button>
       <button class="calc-key" onclick="calcAdd(event,'2')">2</button>
       <button class="calc-key" onclick="calcAdd(event,'3')">3</button>
       <button class="calc-key op" onclick="calcAdd(event,'-')">−</button>
+
       <button class="calc-key" onclick="calcAdd(event,'0')">0</button>
       <button class="calc-key" onclick="calcAdd(event,',')">,</button>
       <button class="calc-key equal" onclick="calcEval(event)">=</button>
       <button class="calc-key op" onclick="calcAdd(event,'+')">+</button>
+
+      <button class="calc-key op" onclick="calcAdd(event,'(')">(</button>
+      <button class="calc-key op" onclick="calcAdd(event,')')">)</button>
+      <button class="calc-key op" onclick="calcAdd(event,'²')">x²</button>
+      <button class="calc-key op" onclick="calcAdd(event,'³')">x³</button>
     </div>
-    <div class="calc-hint">Tipp: Du kannst auch mit der Tastatur rechnen. Punkt oder Komma funktionieren beide.</div>
+    <div class="calc-hint">Tipp: √(25), ∛(27), 5² und 3³ funktionieren. Punkt oder Komma funktionieren beide.</div>
   </div>
 </div>
 
-<div class="card-stage"><div class="card-wrap" onclick="flip()" role="button" tabindex="0" aria-label="Karte umdrehen"><div class="card-inner" id="ci"><div class="face face-front"><div class="face-label">Aufgabe</div><div class="meta-row"><div class="cat-pill" id="cpill">—</div><div class="level-pill" id="lpill">—</div><div class="variant-pill" id="vpill">Variante 1</div></div><div class="q-type" id="qtype"></div><div class="question" id="qtext"></div><div class="given" id="given"></div><div class="flip-cue">↻ Karte umdrehen</div></div><div class="face face-back"><div class="face-label">Lösungsweg</div><div class="sol-body" id="sol"></div></div></div></div></div>
-<div class="known-row" id="kr" style="visibility:hidden"><button class="k-btn no" onclick="event.stopPropagation();mark(false)">✕ Nochmal mit neuen Zahlen</button><button class="k-btn new" onclick="event.stopPropagation();newNumbers()">↻ Neue Zahlen</button><button class="k-btn yes" onclick="event.stopPropagation();mark(true)">✓ Verstanden</button></div>
+<div class="card-stage">
+  <div class="card-wrap" onclick="flip()" role="button" tabindex="0" aria-label="Karte umdrehen">
+    <div class="card-inner" id="ci">
+      <div class="face face-front">
+        <div class="face-label">Aufgabe</div>
+        <div class="meta-row">
+          <div class="cat-pill" id="cpill">—</div>
+          <div class="level-pill" id="lpill">—</div>
+          <div class="variant-pill" id="vpill">Variante 1</div>
+        </div>
+        <div class="q-type" id="qtype"></div>
+        <div class="question" id="qtext"></div>
+        <div class="given" id="given"></div>
+        <div class="flip-cue">↻ Karte umdrehen</div>
+      </div>
+
+      <div class="face face-back">
+        <div class="face-label">Lösungsweg</div>
+        <div class="sol-body" id="sol"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="known-row" id="kr" style="visibility:hidden">
+  <button class="k-btn no" onclick="event.stopPropagation();mark(false)">✕ Nochmal mit neuen Zahlen</button>
+  <button class="k-btn new" onclick="event.stopPropagation();newNumbers()">↻ Neue Zahlen</button>
+  <button class="k-btn yes" onclick="event.stopPropagation();mark(true)">✓ Verstanden</button>
+</div>
 
 <div class="answer-row" onclick="event.stopPropagation()">
 <label class="answer-label" for="answerInput">Ergebnis eingeben und kontrollieren lassen</label>
@@ -130,11 +182,23 @@ body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--tex
 <button class="answer-btn check" onclick="checkAnswer(event)">Prüfen</button>
 <button class="answer-btn hint" onclick="showExpectedAnswer(event)">Lösung anzeigen</button>
 </div>
-<div class="answer-feedback" id="answerFeedback">Du kannst auch mehrere Ergebnisse mit Semikolon trennen, z. B. 120; 80.</div>
+<div class="answer-feedback" id="answerFeedback">Gib nur die Zahl ein. Die Einheit musst du nicht mitschreiben.</div>
 </div>
-<div class="nav-row"><button class="n-btn" id="pb" onclick="nav(-1)" disabled>‹ Zurück</button><span class="counter" id="cnt">1 / 1</span><button class="n-btn" id="nb" onclick="nav(1)">Weiter ›</button></div><button class="shuf-btn" onclick="shuffle()">🔀 Mischen + neue Zahlen</button>
-<div class="note">Bei „Nochmal“ und „Neue Zahlen“ wird dieselbe Aufgabenart mit anderen Werten neu erzeugt. Die Anwendung vermeidet dabei, dass direkt zweimal hintereinander dieselbe Zahlenkombination erscheint.</div>
+
+<div class="nav-row">
+  <button class="n-btn" id="pb" onclick="nav(-1)" disabled>‹ Zurück</button>
+  <span class="counter" id="cnt">1 / 1</span>
+  <button class="n-btn" id="nb" onclick="nav(1)">Weiter ›</button>
 </div>
+
+<button class="shuf-btn" onclick="shuffle()">🔀 Mischen + neue Zahlen</button>
+
+<div class="note">
+Bei „Nochmal“ und „Neue Zahlen“ wird dieselbe Aufgabenart mit anderen Werten neu erzeugt. 
+Die Anwendung vermeidet dabei, dass direkt zweimal hintereinander dieselbe Zahlenkombination erscheint.
+</div>
+</div>
+
 <script>
 const rnd=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
 const pick=arr=>arr[Math.floor(Math.random()*arr.length)];
@@ -143,39 +207,437 @@ const cm=n=>`${de(n)} cm`, cm2=n=>`${de(n)} cm²`, cm3=n=>`${de(n)} cm³`;
 const step=(l,f,note='',res=false)=>({l,f,note,res});
 const triples=[[3,4,5],[5,12,13],[6,8,10],[7,24,25],[8,15,17],[9,12,15]];
 
-function inst(meta, sig, q, given, steps){return {...meta, sig, q, given, steps};}
+function inst(meta, sig, q, given, steps){
+  return {...meta, sig, q, given, steps};
+}
+
 const TEMPLATES=[
-{id:'vol_quad',cat:'Volumen',base:'quadratisch',niveau:'F',type:'Grundaufgabe – quadratische Grundfläche',make(){let a=rnd(3,12),h=rnd(3,15),G=a*a,V=G*h/3;return inst(this,`${a}|${h}`,`Berechne das Volumen der quadratischen Pyramide.`,{a:cm(a),h:cm(h)},[step('Formel','V = 1/3 · G · h'),step('Grundfläche',`G = a² = ${a}² = ${G} cm²`),step('Einsetzen',`V = 1/3 · ${G} · ${h} = ${de(G*h)} : 3`),step('Ergebnis',`V = ${cm3(V)}`,'',true)]);}},
-{id:'vol_quad_h',cat:'Volumen',base:'quadratisch',niveau:'F/G',type:'Rückwärtsaufgabe – Höhe gesucht',make(){let a=rnd(3,12),h=rnd(4,16),V=a*a*h/3;return inst(this,`${a}|${h}`,`Eine quadratische Pyramide hat die Grundseite a und das Volumen V. Bestimme die Höhe h.`,{a:cm(a),V:cm3(V)},[step('Formel umstellen','V = 1/3 · a² · h  →  h = (3 · V) / a²'),step('Einsetzen',`h = (3 · ${de(V)}) / ${a}² = ${de(3*V)} / ${a*a}`),step('Ergebnis',`h = ${cm(h)}`,'',true)]);}},
-{id:'vol_quad_a',cat:'Volumen',base:'quadratisch',niveau:'G',type:'Rückwärtsaufgabe – Grundseite gesucht',make(){let a=rnd(4,14),h=pick([3,6,9,12,15]),V=a*a*h/3;return inst(this,`${a}|${h}`,`Eine quadratische Pyramide hat die Höhe h und das Volumen V. Bestimme die Grundseite a.`,{h:cm(h),V:cm3(V)},[step('Formel umstellen','a² = (3 · V) / h'),step('Einsetzen',`a² = (3 · ${de(V)}) / ${h} = ${de(3*V/h)}`),step('Wurzel ziehen',`a = √${a*a} = ${a}`),step('Ergebnis',`a = ${cm(a)}`,'',true)]);}},
-{id:'vol_rect',cat:'Volumen',base:'rechteckig',niveau:'G',type:'Grundaufgabe – rechteckige Grundfläche',make(){let a=rnd(4,14),b=rnd(3,10),h=rnd(3,15),G=a*b,V=G*h/3;return inst(this,`${a}|${b}|${h}`,`Berechne das Volumen der Pyramide mit rechteckiger Grundfläche.`,{a:cm(a),b:cm(b),h:cm(h)},[step('Formel','V = 1/3 · G · h,  G = a · b'),step('Grundfläche',`G = ${a} · ${b} = ${G} cm²`),step('Einsetzen',`V = 1/3 · ${G} · ${h} = ${de(G*h)} : 3`),step('Ergebnis',`V = ${cm3(V)}`,'',true)]);}},
-{id:'vol_rect_h',cat:'Volumen',base:'rechteckig',niveau:'G',type:'Rückwärtsaufgabe – Höhe gesucht',make(){let a=rnd(4,12),b=rnd(3,9),h=rnd(4,16),G=a*b,V=G*h/3;return inst(this,`${a}|${b}|${h}`,`Eine rechteckige Pyramide hat die Seiten a und b sowie das Volumen V. Bestimme h.`,{a:cm(a),b:cm(b),V:cm3(V)},[step('Grundfläche',`G = a · b = ${a} · ${b} = ${G} cm²`),step('Formel umstellen','h = (3 · V) / G'),step('Einsetzen',`h = (3 · ${de(V)}) / ${G} = ${de(3*V)} / ${G}`),step('Ergebnis',`h = ${cm(h)}`,'',true)]);}},
-{id:'ober_quad_s',cat:'Oberfläche',base:'quadratisch',niveau:'F',type:'Oberfläche mit gegebener Seitenhöhe',make(){let a=rnd(4,14),s=rnd(4,16),G=a*a,A=a*s/2,M=4*A,O=G+M;return inst(this,`${a}|${s}`,`Berechne die Oberfläche der quadratischen Pyramide. Die Seitenhöhe s ist die Höhe eines Dreiecks der Mantelfläche.`,{a:cm(a),s:cm(s)},[step('Formel','O = G + M = a² + 4 · (1/2 · a · s)'),step('Grundfläche',`G = a² = ${a}² = ${G} cm²`),step('Eine Seitenfläche',`A = 1/2 · ${a} · ${s} = ${de(A)} cm²`),step('Mantelfläche',`M = 4 · ${de(A)} = ${de(M)} cm²`),step('Ergebnis',`O = ${G} + ${de(M)} = ${cm2(O)}`,'',true)]);}},
-{id:'ober_quad_h',cat:'Oberfläche',base:'quadratisch',niveau:'G',type:'Seitenhöhe mit Pythagoras berechnen',make(){let tr=pick(triples.slice(0,5)),half=tr[0],h=tr[1],s=tr[2]; if(Math.random()<.5){half=tr[1];h=tr[0];s=tr[2];} let a=2*half,G=a*a,M=2*a*s,O=G+M;return inst(this,`${a}|${h}|${s}`,`Berechne die Oberfläche der quadratischen Pyramide. Die Seitenhöhe s muss zuerst berechnet werden.`,{a:cm(a),h:cm(h)},[step('Seitenhöhe s',`s = √(h² + (a/2)²) = √(${h}² + ${half}²) = √${h*h+half*half} = ${s} cm`),step('Grundfläche',`G = ${a}² = ${G} cm²`),step('Mantelfläche',`M = 4 · (1/2 · ${a} · ${s}) = ${M} cm²`),step('Ergebnis',`O = ${G} + ${M} = ${cm2(O)}`,'',true)]);}},
-{id:'ober_quad_e',cat:'Oberfläche',base:'quadratisch',niveau:'G/H',type:'Seitenkante gegeben',make(){let tr=pick(triples.slice(0,5)),half=tr[0],s=tr[1],e=tr[2]; if(Math.random()<.5){half=tr[1];s=tr[0];e=tr[2];} let a=2*half,G=a*a,M=2*a*s,O=G+M;return inst(this,`${a}|${s}|${e}`,`Quadratische Pyramide: Berechne zuerst die Seitenhöhe s und dann die Oberfläche O.`,{a:cm(a),e:cm(e)},[step('Pythagoras in der Seitenfläche',`s = √(e² − (a/2)²) = √(${e}² − ${half}²)`),step('Seitenhöhe',`s = √(${e*e} − ${half*half}) = √${s*s} = ${s} cm`),step('Oberfläche',`O = a² + 2 · a · s = ${a}² + 2 · ${a} · ${s}`),step('Ergebnis',`O = ${G} + ${M} = ${cm2(O)}`,'',true)]);}},
-{id:'ober_rect',cat:'Oberfläche',base:'rechteckig',niveau:'G/H',type:'Rechteckige Grundfläche – zwei Seitenhöhen',make(){let a=pick([6,8,10,12]),b=pick([4,6,8]),h=pick([5,6,8,10,12]); if(a===b)b+=2; let sa=Math.sqrt(h*h+(b/2)*(b/2)),sb=Math.sqrt(h*h+(a/2)*(a/2)),G=a*b,M=a*sa+b*sb,O=G+M;return inst(this,`${a}|${b}|${h}`,`Berechne näherungsweise Mantelfläche und Oberfläche der Pyramide mit rechteckiger Grundfläche. Runde auf zwei Dezimalstellen.`,{a:cm(a),b:cm(b),h:cm(h)},[step('Seitenhöhe zu a',`s_a = √(h² + (b/2)²) = √(${h}² + ${de(b/2)}²) ≈ ${de(sa)} cm`),step('Seitenhöhe zu b',`s_b = √(h² + (a/2)²) = √(${h}² + ${de(a/2)}²) ≈ ${de(sb)} cm`),step('Mantelfläche',`M = 2 · 1/2 · a · s_a + 2 · 1/2 · b · s_b = a · s_a + b · s_b ≈ ${de(M)} cm²`),step('Ergebnis',`O = G + M = ${a*b} + ${de(M)} ≈ ${cm2(O)}`,'',true)]);}},
-{id:'mix_vol_ober',cat:'Gemischt',base:'quadratisch',niveau:'G',type:'Volumen und Oberfläche zusammen',make(){let tr=pick(triples.slice(0,5)),half=tr[0],h=tr[1],s=tr[2]; if(Math.random()<.5){half=tr[1];h=tr[0];s=tr[2];} let a=2*half,G=a*a,V=G*h/3,O=G+2*a*s;return inst(this,`${a}|${h}|${s}`,`Berechne Volumen und Oberfläche der quadratischen Pyramide.`,{a:cm(a),h:cm(h)},[step('Volumen',`V = 1/3 · a² · h = 1/3 · ${a}² · ${h} = ${cm3(V)}`),step('Seitenhöhe',`s = √(h² + (a/2)²) = √(${h}² + ${half}²) = ${s} cm`),step('Oberfläche',`O = a² + 2 · a · s = ${G} + 2 · ${a} · ${s}`),step('Ergebnis',`V = ${cm3(V)} und O = ${cm2(O)}`,'',true)]);}},
-{id:'mix_units',cat:'Gemischt',base:'rechteckig',niveau:'F/G',type:'Sachaufgabe – Füllmenge',make(){let a=rnd(6,16),b=rnd(4,12),h=pick([6,9,12,15,18]),frac=pick([[1,2,'1/2'],[2,3,'2/3'],[3,4,'3/4']]),V=a*b*h/3,W=V*frac[0]/frac[1];return inst(this,`${a}|${b}|${h}|${frac[2]}`,`Ein pyramidenförmiger Behälter mit rechteckiger Grundfläche ist ${frac[2]} gefüllt. Wie viele Milliliter Flüssigkeit sind enthalten?`,{a:cm(a),b:cm(b),h:cm(h)},[step('Gesamtvolumen',`V = 1/3 · ${a} · ${b} · ${h} = ${cm3(V)}`),step('Füllmenge',`V_F = ${frac[2]} · ${de(V)} = ${de(W)} cm³`),step('Umrechnung','1 cm³ = 1 ml'),step('Ergebnis',`${de(W)} ml Flüssigkeit`,'',true)]);}},
-{id:'mix_scale',cat:'Gemischt',base:'quadratisch',niveau:'H',type:'Maßstab und Volumen',make(){let a=rnd(3,8),h=rnd(4,10),m=pick([50,100,200]);let ae=a*m/100,he=h*m/100,V=ae*ae*he/3;return inst(this,`${a}|${h}|${m}`,`Ein Modell einer quadratischen Pyramide ist im Maßstab 1 : ${m} gebaut. Berechne das echte Volumen in m³.`,{a_Modell:cm(a),h_Modell:cm(h)},[step('Echte Maße',`a = ${a} cm · ${m} = ${a*m} cm = ${de(ae)} m;  h = ${h} cm · ${m} = ${h*m} cm = ${de(he)} m`),step('Volumen',`V = 1/3 · ${de(ae)}² · ${de(he)}`),step('Ergebnis',`V ≈ ${de(V)} m³`,'',true)]);}},
-{id:'mix_composite',cat:'Gemischt',base:'zusammengesetzt',niveau:'G/H',type:'Zusammengesetzter Körper',make(){let a=rnd(4,10),b=rnd(3,8),hp=rnd(3,10),hk=rnd(4,12),Vpr=a*b*hk,Vpy=a*b*hp/3,V=Vpr+Vpy;return inst(this,`${a}|${b}|${hp}|${hk}`,`Ein Körper besteht aus einem Quader und darauf einer passenden rechteckigen Pyramide. Berechne das Gesamtvolumen.`,{a:cm(a),b:cm(b),Quaderhöhe:cm(hk),Pyramidenhöhe:cm(hp)},[step('Quader',`V_Q = a · b · h_Q = ${a} · ${b} · ${hk} = ${cm3(Vpr)}`),step('Pyramide',`V_P = 1/3 · a · b · h_P = 1/3 · ${a} · ${b} · ${hp} = ${cm3(Vpy)}`),step('Addieren',`V_gesamt = ${de(Vpr)} + ${de(Vpy)}`),step('Ergebnis',`V_gesamt = ${cm3(V)}`,'',true)]);}},
-{id:'net_height',cat:'Netze',base:'quadratisch',niveau:'G',type:'Vom Netz zur Körperhöhe',make(){let tr=pick(triples.slice(0,5)),half=tr[0],h=tr[1],s=tr[2]; if(Math.random()<.5){half=tr[1];h=tr[0];s=tr[2];} let a=2*half,O=a*a+2*a*s;return inst(this,`${a}|${s}|${h}`,`Im Netz einer quadratischen Pyramide liest man Grundseite a und Seitenhöhe s ab. Berechne Oberfläche und Körperhöhe h.`,{a:cm(a),s:cm(s)},[step('Oberfläche aus dem Netz',`O = a² + 4 · (1/2 · a · s) = ${a}² + 2 · ${a} · ${s} = ${cm2(O)}`),step('Körperhöhe',`h = √(s² − (a/2)²) = √(${s}² − ${half}²)`),step('Ergebnis',`O = ${cm2(O)} und h = ${cm(h)}`,'',true)]);}},
-{id:'basis_formula',cat:'Grundlagen',base:'Begriffe',niveau:'F',type:'Formeln anwenden und unterscheiden',make(){let a=rnd(4,12),s=rnd(5,14),h=rnd(4,14),G=a*a,M=2*a*s,O=G+M,V=G*h/3;return inst(this,`${a}|${s}|${h}`,`Ordne die Formeln den Größen zu und berechne G, M, O und V für eine quadratische Pyramide.`,{a:cm(a),s:cm(s),h:cm(h)},[step('Grundfläche',`G = a² = ${a}² = ${cm2(G)}`),step('Mantelfläche',`M = 2 · a · s = 2 · ${a} · ${s} = ${cm2(M)}`),step('Oberfläche',`O = G + M = ${G} + ${M} = ${cm2(O)}`),step('Volumen',`V = 1/3 · G · h = 1/3 · ${G} · ${h} = ${cm3(V)}`,'',true)]);}}
+{id:'vol_quad',cat:'Volumen',base:'quadratisch',niveau:'F',type:'Grundaufgabe – quadratische Grundfläche',make(){
+let a=rnd(3,12),h=rnd(3,15),G=a*a,V=G*h/3;
+return inst(this,`${a}|${h}`,
+`Berechne das Volumen der quadratischen Pyramide.`,
+{a:cm(a),h:cm(h)},
+[
+step('Formel','V = 1/3 · G · h'),
+step('Grundfläche',`G = a² = ${a}² = ${G} cm²`),
+step('Einsetzen',`V = 1/3 · ${G} · ${h} = ${de(G*h)} : 3`),
+step('Ergebnis',`V = ${cm3(V)}`,'',true)
+]);}},
+
+{id:'vol_quad_h',cat:'Volumen',base:'quadratisch',niveau:'F/G',type:'Rückwärtsaufgabe – Höhe gesucht',make(){
+let a=rnd(3,12),h=rnd(4,16),V=a*a*h/3;
+return inst(this,`${a}|${h}`,
+`Eine quadratische Pyramide hat die Grundseite a und das Volumen V. Bestimme die Höhe h.`,
+{a:cm(a),V:cm3(V)},
+[
+step('Formel umstellen','V = 1/3 · a² · h  →  h = (3 · V) / a²'),
+step('Einsetzen',`h = (3 · ${de(V)}) / ${a}² = ${de(3*V)} / ${a*a}`),
+step('Ergebnis',`h = ${cm(h)}`,'',true)
+]);}},
+
+{id:'vol_quad_a',cat:'Volumen',base:'quadratisch',niveau:'G',type:'Rückwärtsaufgabe – Grundseite gesucht',make(){
+let a=rnd(4,14),h=pick([3,6,9,12,15]),V=a*a*h/3;
+return inst(this,`${a}|${h}`,
+`Eine quadratische Pyramide hat die Höhe h und das Volumen V. Bestimme die Grundseite a.`,
+{h:cm(h),V:cm3(V)},
+[
+step('Formel umstellen','a² = (3 · V) / h'),
+step('Einsetzen',`a² = (3 · ${de(V)}) / ${h} = ${de(3*V/h)}`),
+step('Wurzel ziehen',`a = √${a*a} = ${a}`),
+step('Ergebnis',`a = ${cm(a)}`,'',true)
+]);}},
+
+{id:'vol_rect',cat:'Volumen',base:'rechteckig',niveau:'G',type:'Grundaufgabe – rechteckige Grundfläche',make(){
+let a=rnd(4,14),b=rnd(3,10),h=rnd(3,15),G=a*b,V=G*h/3;
+return inst(this,`${a}|${b}|${h}`,
+`Berechne das Volumen der Pyramide mit rechteckiger Grundfläche.`,
+{a:cm(a),b:cm(b),h:cm(h)},
+[
+step('Formel','V = 1/3 · G · h,  G = a · b'),
+step('Grundfläche',`G = ${a} · ${b} = ${G} cm²`),
+step('Einsetzen',`V = 1/3 · ${G} · ${h} = ${de(G*h)} : 3`),
+step('Ergebnis',`V = ${cm3(V)}`,'',true)
+]);}},
+
+{id:'vol_rect_h',cat:'Volumen',base:'rechteckig',niveau:'G',type:'Rückwärtsaufgabe – Höhe gesucht',make(){
+let a=rnd(4,12),b=rnd(3,9),h=rnd(4,16),G=a*b,V=G*h/3;
+return inst(this,`${a}|${b}|${h}`,
+`Eine rechteckige Pyramide hat die Seiten a und b sowie das Volumen V. Bestimme die Höhe h.`,
+{a:cm(a),b:cm(b),V:cm3(V)},
+[
+step('Grundfläche',`G = a · b = ${a} · ${b} = ${G} cm²`),
+step('Formel umstellen','h = (3 · V) / G'),
+step('Einsetzen',`h = (3 · ${de(V)}) / ${G} = ${de(3*V)} / ${G}`),
+step('Ergebnis',`h = ${cm(h)}`,'',true)
+]);}},
+
+{id:'ober_quad_s',cat:'Oberfläche',base:'quadratisch',niveau:'F',type:'Oberfläche mit gegebener Seitenhöhe',make(){
+let a=rnd(4,14),s=rnd(4,16),G=a*a,A=a*s/2,M=4*A,O=G+M;
+return inst(this,`${a}|${s}`,
+`Berechne die Oberfläche der quadratischen Pyramide. Die Seitenhöhe s ist die Höhe eines Dreiecks der Mantelfläche.`,
+{a:cm(a),s:cm(s)},
+[
+step('Formel','O = G + M = a² + 4 · (1/2 · a · s)'),
+step('Grundfläche',`G = a² = ${a}² = ${G} cm²`),
+step('Eine Seitenfläche',`A = 1/2 · ${a} · ${s} = ${de(A)} cm²`),
+step('Mantelfläche',`M = 4 · ${de(A)} = ${de(M)} cm²`),
+step('Ergebnis',`O = ${G} + ${de(M)} = ${cm2(O)}`,'',true)
+]);}},
+
+{id:'ober_quad_h',cat:'Oberfläche',base:'quadratisch',niveau:'G',type:'Seitenhöhe mit Pythagoras berechnen',make(){
+let tr=pick(triples.slice(0,5)),half=tr[0],h=tr[1],s=tr[2];
+if(Math.random()<.5){half=tr[1];h=tr[0];s=tr[2];}
+let a=2*half,G=a*a,M=2*a*s,O=G+M;
+return inst(this,`${a}|${h}|${s}`,
+`Berechne die Oberfläche der quadratischen Pyramide. Die Seitenhöhe s muss zuerst berechnet werden.`,
+{a:cm(a),h:cm(h)},
+[
+step('Seitenhöhe s',`s = √(h² + (a/2)²) = √(${h}² + ${half}²) = √${h*h+half*half} = ${s} cm`),
+step('Grundfläche',`G = ${a}² = ${G} cm²`),
+step('Mantelfläche',`M = 4 · (1/2 · ${a} · ${s}) = ${M} cm²`),
+step('Ergebnis',`O = ${G} + ${M} = ${cm2(O)}`,'',true)
+]);}},
+
+{id:'ober_quad_e',cat:'Oberfläche',base:'quadratisch',niveau:'G/H',type:'Seitenkante gegeben',make(){
+let tr=pick(triples.slice(0,5)),half=tr[0],s=tr[1],e=tr[2];
+if(Math.random()<.5){half=tr[1];s=tr[0];e=tr[2];}
+let a=2*half,G=a*a,M=2*a*s,O=G+M;
+return inst(this,`${a}|${s}|${e}`,
+`Quadratische Pyramide: Berechne zuerst die Seitenhöhe s und dann die Oberfläche O.`,
+{a:cm(a),e:cm(e)},
+[
+step('Pythagoras in der Seitenfläche',`s = √(e² − (a/2)²) = √(${e}² − ${half}²)`),
+step('Seitenhöhe',`s = √(${e*e} − ${half*half}) = √${s*s} = ${s} cm`),
+step('Oberfläche',`O = a² + 2 · a · s = ${a}² + 2 · ${a} · ${s}`),
+step('Ergebnis',`O = ${G} + ${M} = ${cm2(O)}`,'',true)
+]);}},
+
+{id:'ober_rect',cat:'Oberfläche',base:'rechteckig',niveau:'G/H',type:'Rechteckige Grundfläche – Oberfläche berechnen',make(){
+let a=pick([6,8,10,12]),b=pick([4,6,8]),h=pick([5,6,8,10,12]); 
+if(a===b)b+=2; 
+let sa=Math.sqrt(h*h+(b/2)*(b/2)),
+    sb=Math.sqrt(h*h+(a/2)*(a/2)),
+    G=a*b,
+    M=a*sa+b*sb,
+    O=G+M;
+
+return inst(this,`${a}|${b}|${h}`,
+`Berechne näherungsweise die Oberfläche der Pyramide mit rechteckiger Grundfläche. Runde auf zwei Dezimalstellen.`,
+{a:cm(a),b:cm(b),h:cm(h)},
+[
+step('Seitenhöhe zu a',`s_a = √(h² + (b/2)²) = √(${h}² + ${de(b/2)}²) ≈ ${de(sa)} cm`),
+step('Seitenhöhe zu b',`s_b = √(h² + (a/2)²) = √(${h}² + ${de(a/2)}²) ≈ ${de(sb)} cm`),
+step('Grundfläche',`G = a · b = ${a} · ${b} = ${G} cm²`),
+step('Mantelfläche',`M = a · s_a + b · s_b ≈ ${de(M)} cm²`),
+step('Ergebnis',`O = G + M = ${G} + ${de(M)} ≈ ${cm2(O)}`,'',true)
+]);}},
+
+{id:'mix_vol_ober',cat:'Gemischt',base:'quadratisch',niveau:'G',type:'Oberfläche mit berechneter Seitenhöhe',make(){
+let tr=pick(triples.slice(0,5)),
+    half=tr[0],
+    h=tr[1],
+    s=tr[2];
+
+if(Math.random()<.5){
+    half=tr[1];
+    h=tr[0];
+    s=tr[2];
+}
+
+let a=2*half,
+    G=a*a,
+    M=2*a*s,
+    O=G+M;
+
+return inst(this,`${a}|${h}|${s}`,
+`Berechne die Oberfläche der quadratischen Pyramide. Die Seitenhöhe s muss zuerst mit dem Satz des Pythagoras berechnet werden.`,
+{a:cm(a),h:cm(h)},
+[
+step('Seitenhöhe',`s = √(h² + (a/2)²) = √(${h}² + ${half}²) = √${h*h+half*half} = ${s} cm`),
+step('Grundfläche',`G = a² = ${a}² = ${G} cm²`),
+step('Mantelfläche',`M = 4 · (1/2 · a · s) = 2 · a · s = 2 · ${a} · ${s} = ${M} cm²`),
+step('Ergebnis',`O = G + M = ${G} + ${M} = ${cm2(O)}`,'',true)
+]);}},
+
+{id:'mix_units',cat:'Gemischt',base:'rechteckig',niveau:'F/G',type:'Sachaufgabe – Füllmenge',make(){
+let a=rnd(6,16),b=rnd(4,12),h=pick([6,9,12,15,18]),frac=pick([[1,2,'1/2'],[2,3,'2/3'],[3,4,'3/4']]),V=a*b*h/3,W=V*frac[0]/frac[1];
+return inst(this,`${a}|${b}|${h}|${frac[2]}`,
+`Ein pyramidenförmiger Behälter mit rechteckiger Grundfläche ist ${frac[2]} gefüllt. Wie viele Milliliter Flüssigkeit sind enthalten?`,
+{a:cm(a),b:cm(b),h:cm(h)},
+[
+step('Gesamtvolumen',`V = 1/3 · ${a} · ${b} · ${h} = ${cm3(V)}`),
+step('Füllmenge',`V_F = ${frac[2]} · ${de(V)} = ${de(W)} cm³`),
+step('Umrechnung','1 cm³ = 1 ml'),
+step('Ergebnis',`${de(W)} ml Flüssigkeit`,'',true)
+]);}},
+
+{id:'mix_scale',cat:'Gemischt',base:'quadratisch',niveau:'H',type:'Maßstab und Volumen',make(){
+let a=rnd(3,8),h=rnd(4,10),m=pick([50,100,200]);
+let ae=a*m/100,he=h*m/100,V=ae*ae*he/3;
+return inst(this,`${a}|${h}|${m}`,
+`Ein Modell einer quadratischen Pyramide ist im Maßstab 1 : ${m} gebaut. Berechne das echte Volumen in m³.`,
+{a_Modell:cm(a),h_Modell:cm(h)},
+[
+step('Echte Maße',`a = ${a} cm · ${m} = ${a*m} cm = ${de(ae)} m;  h = ${h} cm · ${m} = ${h*m} cm = ${de(he)} m`),
+step('Volumen',`V = 1/3 · ${de(ae)}² · ${de(he)}`),
+step('Ergebnis',`V ≈ ${de(V)} m³`,'',true)
+]);}},
+
+{id:'mix_composite',cat:'Gemischt',base:'zusammengesetzt',niveau:'G/H',type:'Zusammengesetzter Körper',make(){
+let a=rnd(4,10),b=rnd(3,8),hp=rnd(3,10),hk=rnd(4,12),Vpr=a*b*hk,Vpy=a*b*hp/3,V=Vpr+Vpy;
+return inst(this,`${a}|${b}|${hp}|${hk}`,
+`Ein Körper besteht aus einem Quader und darauf einer passenden rechteckigen Pyramide. Berechne das Gesamtvolumen.`,
+{a:cm(a),b:cm(b),Quaderhöhe:cm(hk),Pyramidenhöhe:cm(hp)},
+[
+step('Quader',`V_Q = a · b · h_Q = ${a} · ${b} · ${hk} = ${cm3(Vpr)}`),
+step('Pyramide',`V_P = 1/3 · a · b · h_P = 1/3 · ${a} · ${b} · ${hp} = ${cm3(Vpy)}`),
+step('Addieren',`V_gesamt = ${de(Vpr)} + ${de(Vpy)}`),
+step('Ergebnis',`V_gesamt = ${cm3(V)}`,'',true)
+]);}},
+
+{id:'net_height',cat:'Netze',base:'quadratisch',niveau:'G',type:'Vom Netz zur Körperhöhe',make(){
+let tr=pick(triples.slice(0,5)),
+    half=tr[0],
+    h=tr[1],
+    s=tr[2];
+
+if(Math.random()<.5){
+    half=tr[1];
+    h=tr[0];
+    s=tr[2];
+}
+
+let a=2*half;
+
+return inst(this,`${a}|${s}|${h}`,
+`Im Netz einer quadratischen Pyramide liest man die Grundseite a und die Seitenhöhe s ab. Berechne die Körperhöhe h.`,
+{a:cm(a),s:cm(s)},
+[
+step('Rechtwinkliges Dreieck erkennen',`Die Körperhöhe h, die halbe Grundseite a/2 und die Seitenhöhe s bilden ein rechtwinkliges Dreieck.`),
+step('Formel',`h = √(s² − (a/2)²)`),
+step('Einsetzen',`h = √(${s}² − ${half}²) = √${s*s-half*half}`),
+step('Ergebnis',`h = ${cm(h)}`,'',true)
+]);}},
+
+{id:'basis_formula',cat:'Grundlagen',base:'Begriffe',niveau:'F',type:'Formeln anwenden und unterscheiden',make(){
+let tr=pick(triples.slice(0,5)),
+    half=tr[0],
+    h=tr[1],
+    s=tr[2];
+
+if(Math.random()<.5){
+    half=tr[1];
+    h=tr[0];
+    s=tr[2];
+}
+
+let a=2*half,
+    G=a*a,
+    M=2*a*s,
+    O=G+M;
+
+return inst(this,`${a}|${s}|${h}`,
+`Berechne die Oberfläche O einer quadratischen Pyramide. Bestimme dafür zuerst Grundfläche G und Mantelfläche M.`,
+{a:cm(a),s:cm(s)},
+[
+step('Grundfläche',`G = a² = ${a}² = ${cm2(G)}`),
+step('Mantelfläche',`M = 4 · (1/2 · a · s) = 2 · a · s = 2 · ${a} · ${s} = ${cm2(M)}`),
+step('Oberfläche',`O = G + M = ${G} + ${M}`),
+step('Ergebnis',`O = ${cm2(O)}`,'',true)
+]);}}
 ];
+
 const CATS=[...new Set(TEMPLATES.map(t=>t.cat))];
 const BASES=[...new Set(TEMPLATES.map(t=>t.base))];
-let active={cat:new Set(CATS),base:new Set(BASES)};let deck=[],idx=0,flipped=false,status={},lastSig={},variantCount={};
-function makeInstance(t){let x; for(let i=0;i<40;i++){x=t.make(); if(x.sig!==lastSig[t.id])break;} lastSig[t.id]=x.sig; variantCount[t.id]=(variantCount[t.id]||0)+1; x.variant=variantCount[t.id]; return x;}
-function buildDeck(){deck=TEMPLATES.filter(t=>active.cat.has(t.cat)&&active.base.has(t.base)).map(t=>({t,inst:makeInstance(t)}));idx=0;flipped=false;document.getElementById('ci').classList.remove('flipped');document.getElementById('kr').style.visibility='hidden';render();}
-function flip(){flipped=!flipped;document.getElementById('ci').classList.toggle('flipped',flipped);document.getElementById('kr').style.visibility=flipped?'visible':'hidden';}
-function nav(d){idx=Math.max(0,Math.min(deck.length-1,idx+d));flipped=false;document.getElementById('ci').classList.remove('flipped');document.getElementById('kr').style.visibility='hidden';render();}
-function newNumbers(){if(!deck.length)return; deck[idx].inst=makeInstance(deck[idx].t); flipped=false;document.getElementById('ci').classList.remove('flipped');document.getElementById('kr').style.visibility='hidden';render();}
-function mark(k){if(!deck.length)return; status[deck[idx].t.id]=k?'k':'u'; updateStats(); if(k){if(idx<deck.length-1)setTimeout(()=>nav(1),220);}else{setTimeout(()=>newNumbers(),220);}}
-function shuffle(){for(let i=deck.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[deck[i],deck[j]]=[deck[j],deck[i]];} deck.forEach(e=>e.inst=makeInstance(e.t)); idx=0;flipped=false;document.getElementById('ci').classList.remove('flipped');document.getElementById('kr').style.visibility='hidden';render();}
-function render(){if(!deck.length){document.getElementById('qtext').textContent='Keine Karten in dieser Auswahl.';document.getElementById('given').innerHTML='';document.getElementById('given').style.display='none';document.getElementById('qtype').textContent='';document.getElementById('cpill').textContent='—';document.getElementById('lpill').textContent='—';document.getElementById('vpill').textContent='—';document.getElementById('sol').innerHTML='';document.getElementById('cnt').textContent='0 / 0';document.getElementById('pb').disabled=true;document.getElementById('nb').disabled=true;updateStats();resetAnswerBox();return;} const c=deck[idx].inst;document.getElementById('cpill').textContent=c.cat+' · '+c.base;let ci=CATS.indexOf(c.cat);document.getElementById('cpill').className='cat-pill '+(ci>0?'v'+ci:'');document.getElementById('lpill').textContent='Niveau '+c.niveau;document.getElementById('vpill').textContent='Variante '+c.variant;document.getElementById('qtype').textContent=c.type;document.getElementById('qtext').textContent=c.q;const giv=document.getElementById('given'),gk=Object.keys(c.given||{});if(gk.length){giv.style.display='block';giv.innerHTML=gk.map(k=>`<span>${k}</span> = ${c.given[k]}`).join(' &ensp;|&ensp; ');}else{giv.style.display='none';}document.getElementById('sol').innerHTML=c.steps.map(s=>`<div class="sol-step"><div class="label">${s.l}</div><div class="formula ${s.res?'result':''}">${s.f}</div>${s.note?`<div class="small-note">${s.note}</div>`:''}</div>`).join('');document.getElementById('cnt').textContent=(idx+1)+' / '+deck.length;document.getElementById('pb').disabled=idx===0;document.getElementById('nb').disabled=idx===deck.length-1;resetAnswerBox();updateStats();}
-function updateStats(){let k=0,u=0;deck.forEach(e=>{const s=status[e.t.id];if(s==='k')k++;else if(s==='u')u++;});const op=deck.length-k-u;document.getElementById('sc').textContent=k;document.getElementById('uc').textContent=u;document.getElementById('oc').textContent=op;const pct=deck.length?Math.round((k/deck.length)*100):0;document.getElementById('prog').style.width=pct+'%';document.getElementById('pct').textContent=pct+' %';}
-function buildFilters(){const f=document.getElementById('filters');CATS.forEach((cat,i)=>{const b=document.createElement('button');b.className='f-btn on '+(i>0?'cat-'+i:'');b.textContent=cat;b.onclick=()=>{if(active.cat.has(cat)&&active.cat.size>1)active.cat.delete(cat);else active.cat.add(cat);b.classList.toggle('on',active.cat.has(cat));buildDeck();};f.appendChild(b);});const sep=document.createElement('span');sep.className='separator';f.appendChild(sep);BASES.forEach(base=>{const b=document.createElement('button');b.className='f-btn on';b.textContent=base;b.onclick=()=>{if(active.base.has(base)&&active.base.size>1)active.base.delete(base);else active.base.add(base);b.classList.toggle('on',active.base.has(base));buildDeck();};f.appendChild(b);});}
-document.querySelector('.card-wrap').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flip();}});
-buildFilters();buildDeck();
+
+let active={cat:new Set(CATS),base:new Set(BASES)};
+let deck=[],idx=0,flipped=false,status={},lastSig={},variantCount={};
+
+function makeInstance(t){
+  let x;
+  for(let i=0;i<40;i++){
+    x=t.make();
+    if(x.sig!==lastSig[t.id])break;
+  }
+  lastSig[t.id]=x.sig;
+  variantCount[t.id]=(variantCount[t.id]||0)+1;
+  x.variant=variantCount[t.id];
+  return x;
+}
+
+function buildDeck(){
+  deck=TEMPLATES
+    .filter(t=>active.cat.has(t.cat)&&active.base.has(t.base))
+    .map(t=>({t,inst:makeInstance(t)}));
+
+  idx=0;
+  flipped=false;
+  document.getElementById('ci').classList.remove('flipped');
+  document.getElementById('kr').style.visibility='hidden';
+  render();
+}
+
+function flip(){
+  flipped=!flipped;
+  document.getElementById('ci').classList.toggle('flipped',flipped);
+  document.getElementById('kr').style.visibility=flipped?'visible':'hidden';
+}
+
+function nav(d){
+  idx=Math.max(0,Math.min(deck.length-1,idx+d));
+  flipped=false;
+  document.getElementById('ci').classList.remove('flipped');
+  document.getElementById('kr').style.visibility='hidden';
+  render();
+}
+
+function newNumbers(){
+  if(!deck.length)return;
+  deck[idx].inst=makeInstance(deck[idx].t);
+  flipped=false;
+  document.getElementById('ci').classList.remove('flipped');
+  document.getElementById('kr').style.visibility='hidden';
+  render();
+}
+
+function mark(k){
+  if(!deck.length)return;
+  status[deck[idx].t.id]=k?'k':'u';
+  updateStats();
+  if(k){
+    if(idx<deck.length-1)setTimeout(()=>nav(1),220);
+  }else{
+    setTimeout(()=>newNumbers(),220);
+  }
+}
+
+function shuffle(){
+  for(let i=deck.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [deck[i],deck[j]]=[deck[j],deck[i]];
+  }
+  deck.forEach(e=>e.inst=makeInstance(e.t));
+  idx=0;
+  flipped=false;
+  document.getElementById('ci').classList.remove('flipped');
+  document.getElementById('kr').style.visibility='hidden';
+  render();
+}
+
+function render(){
+  if(!deck.length){
+    document.getElementById('qtext').textContent='Keine Karten in dieser Auswahl.';
+    document.getElementById('given').innerHTML='';
+    document.getElementById('given').style.display='none';
+    document.getElementById('qtype').textContent='';
+    document.getElementById('cpill').textContent='—';
+    document.getElementById('lpill').textContent='—';
+    document.getElementById('vpill').textContent='—';
+    document.getElementById('sol').innerHTML='';
+    document.getElementById('cnt').textContent='0 / 0';
+    document.getElementById('pb').disabled=true;
+    document.getElementById('nb').disabled=true;
+    updateStats();
+    resetAnswerBox();
+    return;
+  }
+
+  const c=deck[idx].inst;
+
+  document.getElementById('cpill').textContent=c.cat+' · '+c.base;
+  let ci=CATS.indexOf(c.cat);
+  document.getElementById('cpill').className='cat-pill '+(ci>0?'v'+ci:'');
+  document.getElementById('lpill').textContent='Niveau '+c.niveau;
+  document.getElementById('vpill').textContent='Variante '+c.variant;
+  document.getElementById('qtype').textContent=c.type;
+  document.getElementById('qtext').textContent=c.q;
+
+  const giv=document.getElementById('given'),gk=Object.keys(c.given||{});
+  if(gk.length){
+    giv.style.display='block';
+    giv.innerHTML=gk.map(k=>`<span>${k}</span> = ${c.given[k]}`).join(' &ensp;|&ensp; ');
+  }else{
+    giv.style.display='none';
+  }
+
+  document.getElementById('sol').innerHTML=c.steps.map(s=>`
+    <div class="sol-step">
+      <div class="label">${s.l}</div>
+      <div class="formula ${s.res?'result':''}">${s.f}</div>
+      ${s.note?`<div class="small-note">${s.note}</div>`:''}
+    </div>
+  `).join('');
+
+  document.getElementById('cnt').textContent=(idx+1)+' / '+deck.length;
+  document.getElementById('pb').disabled=idx===0;
+  document.getElementById('nb').disabled=idx===deck.length-1;
+
+  resetAnswerBox();
+  updateStats();
+}
+
+function updateStats(){
+  let k=0,u=0;
+  deck.forEach(e=>{
+    const s=status[e.t.id];
+    if(s==='k')k++;
+    else if(s==='u')u++;
+  });
+  const op=deck.length-k-u;
+  document.getElementById('sc').textContent=k;
+  document.getElementById('uc').textContent=u;
+  document.getElementById('oc').textContent=op;
+  const pct=deck.length?Math.round((k/deck.length)*100):0;
+  document.getElementById('prog').style.width=pct+'%';
+  document.getElementById('pct').textContent=pct+' %';
+}
+
+function buildFilters(){
+  const f=document.getElementById('filters');
+  f.innerHTML='';
+
+  CATS.forEach((cat,i)=>{
+    const b=document.createElement('button');
+    b.className='f-btn '+(active.cat.has(cat)?'on ':'')+(i>0?'cat-'+i:'');
+    b.textContent=cat;
+    b.onclick=()=>{
+      if(active.cat.has(cat)&&active.cat.size>1)active.cat.delete(cat);
+      else active.cat.add(cat);
+      b.classList.toggle('on',active.cat.has(cat));
+      buildDeck();
+    };
+    f.appendChild(b);
+  });
+
+  const sep=document.createElement('span');
+  sep.className='separator';
+  f.appendChild(sep);
+
+  BASES.forEach(base=>{
+    const b=document.createElement('button');
+    b.className='f-btn '+(active.base.has(base)?'on':'');
+    b.textContent=base;
+    b.onclick=()=>{
+      if(active.base.has(base)&&active.base.size>1)active.base.delete(base);
+      else active.base.add(base);
+      b.classList.toggle('on',active.base.has(base));
+      buildDeck();
+    };
+    f.appendChild(b);
+  });
+}
+
+document.querySelector('.card-wrap').addEventListener('keydown',e=>{
+  if(e.key==='Enter'||e.key===' '){
+    e.preventDefault();
+    flip();
+  }
+});
+
+// Anfangszustand
+buildFilters();
+buildDeck();
+
 
 // ════════════════════════════════════════════════════════════════
 // KlassenMonitor – Tracker & Namenseingabe
@@ -190,85 +652,125 @@ buildFilters();buildDeck();
   const STORAGE_CID  = 'km_client_id';
   const STORAGE_NAME = 'km_student_name';
 
-  // Stabile Client-ID
   let clientId = localStorage.getItem(STORAGE_CID);
   if(!clientId){
     clientId = (crypto.randomUUID ? crypto.randomUUID() : 'id_'+Math.random().toString(36).slice(2)+'_'+Date.now());
     localStorage.setItem(STORAGE_CID, clientId);
   }
 
-  function slugify(t){ return String(t).toLowerCase().replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss').replace(/[^a-z0-9]+/g,'_').replace(/^_+|_+$/g,''); }
+  function slugify(t){
+    return String(t)
+      .toLowerCase()
+      .replace(/ä/g,'ae')
+      .replace(/ö/g,'oe')
+      .replace(/ü/g,'ue')
+      .replace(/ß/g,'ss')
+      .replace(/[^a-z0-9]+/g,'_')
+      .replace(/^_+|_+$/g,'');
+  }
+
   const SESSION_ID = 'sess_'+slugify(APP_NAME)+'_'+clientId;
 
   let studentName = '';
   let intervalId  = null;
   let leaveTimer  = null;
 
-  // ── Dialog ──────────────────────────────────────────────────────
   window.kmStart = function(){
     const input = document.getElementById('km-name-input');
     const name  = input.value.trim();
+
     if(name.length < 2){
       input.classList.add('error');
       setTimeout(()=>input.classList.remove('error'), 400);
       input.focus();
       return;
     }
+
     studentName = name;
     localStorage.setItem(STORAGE_NAME, name);
     window.KM_STUDENT_NAME = name;
 
-    // Dialog ausblenden
     document.getElementById('km-overlay').style.display = 'none';
 
-    // App initialisieren (erst jetzt, nach Namenseingabe)
     buildFilters();
     buildDeck();
 
-    // Greeting anzeigen
     document.getElementById('km-name-display').textContent = name;
     const g = document.getElementById('km-greeting');
     g.style.display = 'block';
-    setTimeout(()=>{ g.style.transition='opacity .6s'; g.style.opacity='0'; setTimeout(()=>g.style.display='none',700); }, 3500);
+    g.style.opacity = '1';
 
-    // Tracker starten
+    setTimeout(()=>{
+      g.style.transition='opacity .6s';
+      g.style.opacity='0';
+      setTimeout(()=>g.style.display='none',700);
+    }, 3500);
+
     sendPing('ping');
-    intervalId = setInterval(()=>{ if(!document.hidden) sendPing('ping'); }, PING_MS);
+    intervalId = setInterval(()=>{
+      if(!document.hidden) sendPing('ping');
+    }, PING_MS);
   };
 
-  // Enter-Taste im Namensfeld
   document.getElementById('km-name-input').addEventListener('keydown', e=>{
     if(e.key==='Enter') window.kmStart();
   });
 
-  // Gespeicherten Namen vorausfüllen (optional)
   const saved = localStorage.getItem(STORAGE_NAME);
   if(saved) document.getElementById('km-name-input').value = saved;
 
-  // ── Ping / Leave ────────────────────────────────────────────────
   async function sendPing(action){
     try{
       const res = await fetch(`${SUPABASE_URL}/rest/v1/active_sessions?on_conflict=session_id`,{
         method:'POST',
-        headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY,'Content-Type':'application/json','Prefer':'resolution=merge-duplicates,return=minimal'},
-        body:JSON.stringify({session_id:SESSION_ID,client_id:clientId,app_name:APP_NAME,student_name:studentName||null,last_seen:new Date().toISOString(),action})
+        headers:{
+          'apikey':SUPABASE_KEY,
+          'Authorization':'Bearer '+SUPABASE_KEY,
+          'Content-Type':'application/json',
+          'Prefer':'resolution=merge-duplicates,return=minimal'
+        },
+        body:JSON.stringify({
+          session_id:SESSION_ID,
+          client_id:clientId,
+          app_name:APP_NAME,
+          student_name:studentName||null,
+          last_seen:new Date().toISOString(),
+          action
+        })
       });
-      if(!res.ok){ const t=await res.text().catch(()=>''); console.error('[KM] Ping-Fehler:',res.status,t); }
-      else{ console.debug('[KM] Ping:',action,studentName); }
-    }catch(e){ console.error('[KM] Netzfehler:',e); }
+
+      if(!res.ok){
+        const t=await res.text().catch(()=>'');
+        console.error('[KM] Ping-Fehler:',res.status,t);
+      }else{
+        console.debug('[KM] Ping:',action,studentName);
+      }
+    }catch(e){
+      console.error('[KM] Netzfehler:',e);
+    }
   }
 
   async function sendLeave(){
     try{
       await fetch(`${SUPABASE_URL}/rest/v1/active_sessions?session_id=eq.${encodeURIComponent(SESSION_ID)}`,{
-        method:'PATCH', keepalive:true,
-        headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},
-        body:JSON.stringify({last_seen:'2000-01-01T00:00:00Z',action:'leave'})
+        method:'PATCH',
+        keepalive:true,
+        headers:{
+          'apikey':SUPABASE_KEY,
+          'Authorization':'Bearer '+SUPABASE_KEY,
+          'Content-Type':'application/json',
+          'Prefer':'return=minimal'
+        },
+        body:JSON.stringify({
+          last_seen:'2000-01-01T00:00:00Z',
+          action:'leave'
+        })
       });
-    }catch(e){ console.error('[KM] Leave-Fehler:',e); }
+    }catch(e){
+      console.error('[KM] Leave-Fehler:',e);
+    }
   }
 
-  // ── Events ──────────────────────────────────────────────────────
   window.addEventListener('beforeunload',()=>{
     if(leaveTimer) clearTimeout(leaveTimer);
     if(intervalId) clearInterval(intervalId);
@@ -276,11 +778,15 @@ buildFilters();buildDeck();
   });
 
   document.addEventListener('visibilitychange',()=>{
-    if(!studentName) return; // noch nicht gestartet
+    if(!studentName) return;
+
     if(document.hidden){
       leaveTimer = setTimeout(()=>sendLeave(), 5000);
     } else {
-      if(leaveTimer){ clearTimeout(leaveTimer); leaveTimer=null; }
+      if(leaveTimer){
+        clearTimeout(leaveTimer);
+        leaveTimer=null;
+      }
       sendPing('ping');
     }
   });
@@ -288,167 +794,299 @@ buildFilters();buildDeck();
 })();
 
 
-// ── Ergebnis-Eingabe + automatische Kontrolle ─────────────────
+// ════════════════════════════════════════════════════════════════
+// Ergebnis-Eingabe + automatische Kontrolle
+// ════════════════════════════════════════════════════════════════
+
 function getCurrentCardData(){
-    if(!deck || !deck.length) return null;
-    const entry = deck[idx];
-    return entry ? (entry.data || entry.inst || null) : null;
-}
-function parseNumbersFromText(text){
-    const matches = String(text || '').match(/-?\d+(?:[\.,]\d+)?/g) || [];
-    return matches.map(x => Number(String(x).replace(',', '.'))).filter(Number.isFinite);
-}
-function uniqueNumbers(nums){
-    const out=[];
-    nums.forEach(n=>{ if(!out.some(x=>Math.abs(x-n)<0.000001)) out.push(n); });
-    return out;
-}
-function expectedAnswers(){
-    const c = getCurrentCardData();
-    if(!c || !Array.isArray(c.steps)) return [];
-    const resultSteps = c.steps.filter(s => s.res);
-    const source = (resultSteps.length ? resultSteps : c.steps.slice(-1)).map(s => s.f || '').join(' | ');
-    const unitRegex = /(-?\d+(?:[\.,]\d+)?)\s*(?:cm²|cm³|cm2|cm3|cm|dm³|dm3|m²|m³|m2|m3|ml|Liter|l\b)/gi;
-    const vals=[];
-    let m;
-    while((m = unitRegex.exec(source)) !== null){ vals.push(Number(m[1].replace(',', '.'))); }
-    if(vals.length) return uniqueNumbers(vals);
-    const all = parseNumbersFromText(source);
-    return all.length ? [all[all.length-1]] : [];
-}
-function formatAnswerNumber(n){
-    const rounded = Math.round(n * 100) / 100;
-    return String(rounded).replace('.', ',');
-}
-function answerTolerance(expected){
-    return Math.max(0.05, Math.abs(expected) * 0.01);
-}
-function resetAnswerBox(){
-    const input = document.getElementById('answerInput');
-    const fb = document.getElementById('answerFeedback');
-    if(input) input.value = '';
-    if(fb){
-        fb.className = 'answer-feedback';
-        const n = expectedAnswers().length;
-        fb.textContent = n > 1 ? 'Mehrere Ergebnisse bitte mit Semikolon trennen, z. B. Volumen; Oberfläche.' : 'Gib nur die Zahl ein. Einheiten wie cm² oder cm³ sind nicht nötig.';
-    }
-}
-function checkAnswer(e){
-    if(e){ e.stopPropagation(); e.preventDefault(); }
-    const input = document.getElementById('answerInput');
-    const fb = document.getElementById('answerFeedback');
-    if(!input || !fb) return;
-    const expected = expectedAnswers();
-    const given = parseNumbersFromText(input.value);
-    fb.className = 'answer-feedback';
-    if(!expected.length){
-        fb.classList.add('hint');
-        fb.textContent = 'Für diese Karte konnte kein eindeutiges Zahlen-Ergebnis erkannt werden. Drehe die Karte um und vergleiche den Lösungsweg.';
-        return;
-    }
-    if(!given.length){
-        fb.classList.add('bad');
-        fb.textContent = 'Bitte gib zuerst eine Zahl ein.';
-        input.focus();
-        return;
-    }
-    const matched = expected.map(exp => given.some(g => Math.abs(g-exp) <= answerTolerance(exp)));
-    const correct = matched.every(Boolean);
-    if(correct){
-        fb.classList.add('ok');
-        fb.textContent = '✓ Richtig! Das Ergebnis passt.';
-        if(deck && deck.length){
-            const entry = deck[idx];
-            const id = entry.type ? entry.type.id : (entry.t ? entry.t.id : null);
-            if(id){ status[id] = 'k'; updateStats(); }
-        }
-    }else{
-        fb.classList.add('bad');
-        fb.textContent = expected.length > 1
-            ? 'Noch nicht richtig. Prüfe, ob du alle gesuchten Ergebniswerte eingegeben hast.'
-            : 'Noch nicht richtig. Prüfe Formel, Einsetzen und Einheit noch einmal.';
-        if(deck && deck.length){
-            const entry = deck[idx];
-            const id = entry.type ? entry.type.id : (entry.t ? entry.t.id : null);
-            if(id && status[id] !== 'k'){ status[id] = 'u'; updateStats(); }
-        }
-    }
-}
-function showExpectedAnswer(e){
-    if(e){ e.stopPropagation(); e.preventDefault(); }
-    const fb = document.getElementById('answerFeedback');
-    if(!fb) return;
-    const expected = expectedAnswers();
-    fb.className = 'answer-feedback hint';
-    fb.textContent = expected.length
-        ? 'Erwartete Zahl(en): ' + expected.map(formatAnswerNumber).join(' ; ')
-        : 'Keine eindeutige Zahl erkannt. Nutze den Lösungsweg auf der Rückseite.';
-}
-const answerInputEl = document.getElementById('answerInput');
-if(answerInputEl){
-    answerInputEl.addEventListener('keydown', e => {
-        if(e.key === 'Enter') checkAnswer(e);
-    });
+  if(!deck || !deck.length) return null;
+  const entry = deck[idx];
+  return entry ? (entry.inst || null) : null;
 }
 
-// ── Zusatztools: QR-Code + Taschenrechner ─────────────────────
-function toolStop(e){ if(e){ e.stopPropagation(); e.preventDefault(); } }
+function parseNumbersFromText(text){
+  const matches = String(text || '').match(/-?\d+(?:[\.,]\d+)?/g) || [];
+  return matches
+    .map(x => Number(String(x).replace(',', '.')))
+    .filter(Number.isFinite);
+}
+
+function uniqueNumbers(nums){
+  const out=[];
+  nums.forEach(n=>{
+    if(!out.some(x=>Math.abs(x-n)<0.000001)) out.push(n);
+  });
+  return out;
+}
+
+function expectedAnswers(){
+  const c = getCurrentCardData();
+  if(!c || !Array.isArray(c.steps)) return [];
+
+  const resultSteps = c.steps.filter(s => s.res);
+  const source = (resultSteps.length ? resultSteps : c.steps.slice(-1))
+    .map(s => s.f || '')
+    .join(' | ');
+
+  const unitRegex = /(-?\d+(?:[\.,]\d+)?)\s*(?:cm²|cm³|cm2|cm3|cm|dm³|dm3|m²|m³|m2|m3|ml|Liter|l\b)/gi;
+  const vals=[];
+  let m;
+
+  while((m = unitRegex.exec(source)) !== null){
+    vals.push(Number(m[1].replace(',', '.')));
+  }
+
+  if(vals.length) return uniqueNumbers(vals);
+
+  const all = parseNumbersFromText(source);
+  return all.length ? [all[all.length-1]] : [];
+}
+
+function formatAnswerNumber(n){
+  const rounded = Math.round(n * 100) / 100;
+  return String(rounded).replace('.', ',');
+}
+
+function answerTolerance(expected){
+  return Math.max(0.05, Math.abs(expected) * 0.01);
+}
+
+function resetAnswerBox(){
+  const input = document.getElementById('answerInput');
+  const fb = document.getElementById('answerFeedback');
+
+  if(input) input.value = '';
+
+  if(fb){
+    fb.className = 'answer-feedback';
+    fb.textContent = 'Gib nur die Zahl ein. Einheiten wie cm², cm³, m³ oder ml sind nicht nötig.';
+  }
+}
+
+function checkAnswer(e){
+  if(e){
+    e.stopPropagation();
+    e.preventDefault();
+  }
+
+  const input = document.getElementById('answerInput');
+  const fb = document.getElementById('answerFeedback');
+
+  if(!input || !fb) return;
+
+  const expected = expectedAnswers();
+  const given = parseNumbersFromText(input.value);
+
+  fb.className = 'answer-feedback';
+
+  if(!expected.length){
+    fb.classList.add('hint');
+    fb.textContent = 'Für diese Karte konnte kein eindeutiges Zahlen-Ergebnis erkannt werden. Drehe die Karte um und vergleiche den Lösungsweg.';
+    return;
+  }
+
+  if(!given.length){
+    fb.classList.add('bad');
+    fb.textContent = 'Bitte gib zuerst eine Zahl ein.';
+    input.focus();
+    return;
+  }
+
+  const correct = expected.some(exp =>
+    given.some(g => Math.abs(g-exp) <= answerTolerance(exp))
+  );
+
+  if(correct){
+    fb.classList.add('ok');
+    fb.textContent = '✓ Richtig! Das Ergebnis passt.';
+
+    if(deck && deck.length){
+      const entry = deck[idx];
+      const id = entry.t ? entry.t.id : null;
+      if(id){
+        status[id] = 'k';
+        updateStats();
+      }
+    }
+  }else{
+    fb.classList.add('bad');
+    fb.textContent = 'Noch nicht richtig. Prüfe Formel, Einsetzen, Rechenweg und Rundung noch einmal.';
+
+    if(deck && deck.length){
+      const entry = deck[idx];
+      const id = entry.t ? entry.t.id : null;
+      if(id && status[id] !== 'k'){
+        status[id] = 'u';
+        updateStats();
+      }
+    }
+  }
+}
+
+function showExpectedAnswer(e){
+  if(e){
+    e.stopPropagation();
+    e.preventDefault();
+  }
+
+  const fb = document.getElementById('answerFeedback');
+  if(!fb) return;
+
+  const expected = expectedAnswers();
+  fb.className = 'answer-feedback hint';
+  fb.textContent = expected.length
+    ? 'Erwartete Zahl: ' + expected.map(formatAnswerNumber).join(' ; ')
+    : 'Keine eindeutige Zahl erkannt. Nutze den Lösungsweg auf der Rückseite.';
+}
+
+const answerInputEl = document.getElementById('answerInput');
+if(answerInputEl){
+  answerInputEl.addEventListener('keydown', e => {
+    if(e.key === 'Enter') checkAnswer(e);
+  });
+}
+
+
+// ════════════════════════════════════════════════════════════════
+// Zusatztools: QR-Code + Taschenrechner
+// ════════════════════════════════════════════════════════════════
+
+function toolStop(e){
+  if(e){
+    e.stopPropagation();
+    e.preventDefault();
+  }
+}
+
 function currentPageUrl(){
-    const url = window.location.href;
-    if(url && !url.startsWith('file:')) return url;
-    return 'https://dein-github-name.github.io/dein-repository/';
+  const url = window.location.href;
+  if(url && !url.startsWith('file:')) return url;
+  return 'https://dein-github-name.github.io/dein-repository/';
 }
+
 function showQrTool(e){
-    toolStop(e);
-    const url = currentPageUrl();
-    const img = document.getElementById('qrToolImage');
-    const label = document.getElementById('qrToolUrl');
-    if(img) img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=10&data=' + encodeURIComponent(url);
-    if(label) label.textContent = url.startsWith('https://dein-github-name') ? 'Nach dem Hochladen auf GitHub wird hier automatisch die echte Seitenadresse verwendet.' : url;
-    const overlay = document.getElementById('qrToolOverlay');
-    if(overlay) overlay.style.display = 'flex';
+  toolStop(e);
+
+  const url = currentPageUrl();
+  const img = document.getElementById('qrToolImage');
+  const label = document.getElementById('qrToolUrl');
+
+  if(img){
+    img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=10&data=' + encodeURIComponent(url);
+  }
+
+  if(label){
+    label.textContent = url.startsWith('https://dein-github-name')
+      ? 'Nach dem Hochladen auf GitHub wird hier automatisch die echte Seitenadresse verwendet.'
+      : url;
+  }
+
+  const overlay = document.getElementById('qrToolOverlay');
+  if(overlay) overlay.style.display = 'flex';
 }
+
 function showCalcTool(e){
-    toolStop(e);
-    const overlay = document.getElementById('calcToolOverlay');
-    if(overlay) overlay.style.display = 'flex';
-    setTimeout(()=>{ const d=document.getElementById('calcDisplay'); if(d) d.focus(); }, 50);
+  toolStop(e);
+
+  const overlay = document.getElementById('calcToolOverlay');
+  if(overlay) overlay.style.display = 'flex';
+
+  setTimeout(()=>{
+    const d=document.getElementById('calcDisplay');
+    if(d) d.focus();
+  }, 50);
 }
-function hideTool(id){ const overlay=document.getElementById(id); if(overlay) overlay.style.display='none'; }
-function closeToolOverlay(e,id){ if(e && e.target && e.target.id===id) hideTool(id); }
+
+function hideTool(id){
+  const overlay=document.getElementById(id);
+  if(overlay) overlay.style.display='none';
+}
+
+function closeToolOverlay(e,id){
+  if(e && e.target && e.target.id===id) hideTool(id);
+}
+
 function calcAdd(e,val){
-    toolStop(e);
-    const d=document.getElementById('calcDisplay');
-    if(!d) return;
-    d.value += val;
-    d.focus();
+  toolStop(e);
+  const d=document.getElementById('calcDisplay');
+  if(!d) return;
+  d.value += val;
+  d.focus();
 }
-function calcClear(e){ toolStop(e); const d=document.getElementById('calcDisplay'); if(d){ d.value=''; d.focus(); } }
-function calcBack(e){ toolStop(e); const d=document.getElementById('calcDisplay'); if(d){ d.value=d.value.slice(0,-1); d.focus(); } }
+
+function calcClear(e){
+  toolStop(e);
+  const d=document.getElementById('calcDisplay');
+  if(d){
+    d.value='';
+    d.focus();
+  }
+}
+
+function calcBack(e){
+  toolStop(e);
+  const d=document.getElementById('calcDisplay');
+  if(d){
+    d.value=d.value.slice(0,-1);
+    d.focus();
+  }
+}
+
+function convertPowers(expr){
+  expr = expr.replace(/(\d+(?:\.\d+)?|\([^()]*\))²/g, 'Math.pow($1,2)');
+  expr = expr.replace(/(\d+(?:\.\d+)?|\([^()]*\))³/g, 'Math.pow($1,3)');
+  return expr;
+}
+
 function calcEval(e){
-    toolStop(e);
-    const d=document.getElementById('calcDisplay');
-    if(!d) return;
-    try{
-        let expr=d.value.replace(/,/g,'.').replace(/×/g,'*').replace(/÷/g,'/').replace(/−/g,'-');
-        if(!/^[0-9+\-*/().\s]*$/.test(expr)) throw new Error('Ungültige Eingabe');
-        const result = Function('"use strict"; return (' + expr + ')')();
-        if(!Number.isFinite(result)) throw new Error('Nicht berechenbar');
-        d.value = String(Math.round(result*100000000)/100000000).replace('.', ',');
-    }catch(err){
-        d.value='Fehler';
-        setTimeout(()=>{ if(d.value==='Fehler') d.value=''; }, 900);
+  toolStop(e);
+
+  const d=document.getElementById('calcDisplay');
+  if(!d) return;
+
+  try{
+    let expr=d.value
+      .replace(/,/g,'.')
+      .replace(/×/g,'*')
+      .replace(/÷/g,'/')
+      .replace(/−/g,'-')
+      .replace(/√\(/g,'Math.sqrt(')
+      .replace(/∛\(/g,'Math.cbrt(');
+
+    expr = convertPowers(expr);
+
+    if(!/^[0-9+\-*/().\sMathsqrtcbrtpow,]*$/.test(expr)){
+      throw new Error('Ungültige Eingabe');
     }
-    d.focus();
+
+    const result = Function('"use strict"; return (' + expr + ')')();
+
+    if(!Number.isFinite(result)){
+      throw new Error('Nicht berechenbar');
+    }
+
+    d.value = String(Math.round(result*100000000)/100000000).replace('.', ',');
+  }catch(err){
+    d.value='Fehler';
+    setTimeout(()=>{
+      if(d.value==='Fehler') d.value='';
+    }, 900);
+  }
+
+  d.focus();
 }
+
 document.addEventListener('keydown', function(e){
-    const calcOpen = document.getElementById('calcToolOverlay')?.style.display === 'flex';
-    const qrOpen = document.getElementById('qrToolOverlay')?.style.display === 'flex';
-    if(e.key === 'Escape'){
-        if(calcOpen) hideTool('calcToolOverlay');
-        if(qrOpen) hideTool('qrToolOverlay');
-    }
-    if(calcOpen && e.key === 'Enter') calcEval(e);
-});</script>
+  const calcOpen = document.getElementById('calcToolOverlay')?.style.display === 'flex';
+  const qrOpen = document.getElementById('qrToolOverlay')?.style.display === 'flex';
+
+  if(e.key === 'Escape'){
+    if(calcOpen) hideTool('calcToolOverlay');
+    if(qrOpen) hideTool('qrToolOverlay');
+  }
+
+  if(calcOpen && e.key === 'Enter') calcEval(e);
+});
+</script>
 </body>
 </html>
